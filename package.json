@@ -1,0 +1,23 @@
+{
+  "name": "bidauc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/harshalw2003/BidAuc.git"
+  },
+  "author": "Harshal Warukar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshalw2003/BidAuc/issues"
+  },
+  "homepage": "https://github.com/harshalw2003/BidAuc#readme",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

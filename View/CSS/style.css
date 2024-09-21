@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=NTR&family=Outfit:wght@100..900&display=swap');
+
+/* font-family: "Outfit", sans-serif; */
+/* font-family: "NTR", sans-serif; */
+
+*{
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbar{
+
+    width: 100%;
+    height: 10vh;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    padding-left: 20vh;
+
+}
+
+.logo{
+
+    width: 20vh;
+    height: 10vh;
+}
+
+.location-cont{
+
+    display: flex;
+    border: 1px solid #468585;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 50vh;
+    height: 6vh;
+
+}
+
+.location-icon{
+
+    width: 25px;
+    height: 25px;
+    opacity: 0.75;
+}
+
+.dropdown-icon{
+
+    width: 25px;
+    height: 25px;
+    opacity: 0.75;
+}
