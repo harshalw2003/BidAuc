@@ -1,0 +1,158 @@
+const contentLoad = () => {
+  const profileButton = document.getElementById("profile-button");
+  // console.log(profileButton);
+
+  const dashLoginMenu = document.getElementById("dash-login-menu");
+
+  profileButton.addEventListener("click", (event) => {
+    dashLoginMenu.style.transform = "translateY(80%)";
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", (event) => {
+    // Check if the click happened outside of the profileButton and dashLoginMenu
+    if (
+      !profileButton.contains(event.target) &&
+      !dashLoginMenu.contains(event.target)
+    ) {
+      // Hide the dashLoginMenu by resetting the transform
+      dashLoginMenu.style.transform = "translateY(-100%)"; // Move it back up (or adjust as needed)
+    }
+  });
+
+  const loginPopupOpen = document.getElementById("login-popup-open");
+  const login_reg_cont = document.getElementById("login-register-section");
+  const log_reg_close_btn = document.getElementsByClassName(
+    "close-log-reg-button"
+  );
+
+  loginPopupOpen.addEventListener("click", (event) => {
+    console.log("Menu Login Button Clicked");
+
+    event.preventDefault();
+
+    login_reg_cont.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  });
+
+  for (i = 0; i < log_reg_close_btn.length; i++) {
+    log_reg_close_btn[i].addEventListener("click", (event) => {
+      login_reg_cont.style.display = "none";
+      registerSeekerCont.style.display = "none";
+      registerProviderCont.style.display = "none";
+      commonCont.style.display = "flex";
+      loginCont.style.display = "none";
+    });
+  }
+
+  const commonCont = document.getElementById("choose-reg-cont");
+  const seekerRegisterBtn = document.getElementById("seeker-register-btn");
+  const providerRegisterBtn = document.getElementById("provider-register-btn");
+
+  const login_button = document.getElementById("login-button");
+
+  const registerSeekerCont = document.getElementById("register-seeker-cont");
+  const registerProviderCont = document.getElementById(
+    "register-provider-cont"
+  );
+  const loginCont = document.getElementById("login-cont");
+
+  seekerRegisterBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    registerSeekerCont.style.display = "flex";
+    commonCont.style.display = "none";
+  });
+
+  providerRegisterBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    registerProviderCont.style.display = "flex";
+    commonCont.style.display = "none";
+  });
+
+  login_button.addEventListener("click", (event) => {
+    event.preventDefault();
+    loginCont.style.display = "flex";
+    commonCont.style.display = "none";
+  });
+
+  const learnMoreJobBtn = document.getElementsByClassName(
+    "learn-more-job-button"
+  );
+  const learnLessJobBtn = document.getElementsByClassName(
+    "learn-less-job-button"
+  );
+
+  console.log(learnMoreJobBtn);
+  console.log(learnLessJobBtn);
+
+  for (i = 0; i < learnMoreJobBtn.length; i++) {
+    learnMoreJobBtn[i].addEventListener("click", (event) => {
+      console.log(event.currentTarget);
+      const targetJobCard = event.currentTarget.getAttribute("target");
+      document.getElementById(targetJobCard).style.height = "83vh";
+      event.currentTarget.style.display = "none";
+      console.log(targetJobCard);
+
+    });
+
+  }
+
+
+  for (j = 0; j < learnLessJobBtn.length; j++) {
+    learnLessJobBtn[j].addEventListener("click", (event) => {
+      console.log(event.currentTarget);
+
+      const targetJobCard = event.currentTarget.getAttribute("target");
+      document.getElementById(targetJobCard).style.height = "37vh";
+
+         // Show the corresponding "Learn More" button when "Learn Less" is clicked
+         const correspondingLearnMoreBtn = document.querySelector(`[target="${targetJobCard}"]`);
+         correspondingLearnMoreBtn.style.display = "flex";  // Show "Learn More" button
+      console.log(j);
+      console.log(targetJobCard);
+
+    });
+  }
+
+  const jobDetailsCard = document.querySelectorAll(".job-detail-card");
+  console.log(jobDetailsCard);
+  
+  const jobDropdownDown = document.querySelectorAll(".job-dropdown-down");
+  console.log(jobDropdownDown);
+  
+  const jobDropdownUp = document.querySelectorAll(".job-dropdown-up");
+  console.log(jobDropdownUp);
+  
+  for (let i = 0; i < jobDetailsCard.length; i++) {
+  
+    jobDropdownDown[i].addEventListener("click", (event) => {
+      event.preventDefault();
+      console.log("Dropdown Down Clicked");
+  
+      // Expand the job detail card
+      jobDetailsCard[i].style.maxHeight = jobDetailsCard[i].scrollHeight + "px"; // Expands to the content's height
+      jobDetailsCard[i].style.backgroundColor = "transparent";
+      event.currentTarget.style.display = "none";
+      jobDropdownUp[i].style.display = "block";
+    });
+  }
+  
+  for (let i = 0; i < jobDetailsCard.length; i++) {
+  
+    jobDropdownUp[i].addEventListener("click", (event) => {
+      event.preventDefault();
+      console.log("Dropdown Up Clicked");
+  
+      // Collapse the job detail card
+      jobDetailsCard[i].style.maxHeight = "8vh"; // Collapses back to 8vh
+      jobDetailsCard[i].style.backgroundColor = "rgb(84, 166, 166, 0.6)";
+      event.currentTarget.style.display = "none";
+      jobDropdownDown[i].style.display = "block";
+    });
+  }
+  
+  
+};
+
+
+document.addEventListener("DOMContentLoaded", contentLoad);
