@@ -139,7 +139,7 @@
    flex-direction: column;
    width: 150px;
    height: 90px;
-   border-radius: 10px;
+   border-radius: 5px;
    transform: translateY(-150%);
    animation: ease-in-out;
    transition: transform 0.5s ease;
@@ -161,7 +161,7 @@
 
  #dashboard-button {
 
-   border-width: 0px 0px 1px 0px;
+   border-width: 0px 0px 0.1px 0px;
    border-color: white;
    border-style: solid;
 
@@ -451,7 +451,7 @@
    width: 50%;
  }
 
- .provider img {
+ .provider-details-left img {
    height: 50%;
    width: 30%;
    border-radius: 5px;
@@ -481,11 +481,16 @@
    align-items: center;
    justify-content: center;
    border-radius: 5px;
-   border: 0.5px solid rgb(0, 0, 0, 0.7);
-   box-shadow: 1px 1px 1px rgba(0, 0, 0);
+   border: 0.5px solid #468585;
    cursor: pointer;
+   background: transparent;
 
 
+ }
+
+ .view-profile-btn:hover{
+
+  transform: scale(1.02);
  }
 
  .rating {
@@ -664,6 +669,12 @@
   display: flex;
   width: 100%;
   gap: 20px;
+}
+
+.dashboard-body-side{
+
+  display: flex;
+  flex-direction: column;
 }
 
  /* Sidebar Quote Section */
@@ -936,6 +947,15 @@
 
  }
 
+
+ .job-detail-card .top .right{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+ }
+
  .job-name{
 
   font-size: 1.5vw;
@@ -1147,6 +1167,7 @@
   border-radius: 5px;
   justify-content: center;
   cursor: pointer;
+ 
 
 }
 
@@ -1170,14 +1191,17 @@
 
  .dashboard--profile-content{
 
-  display: flex;
-  width: 80vw;
+  width: 75vw;
   flex-direction: column;
-  /* border: 1px solid black; */
   padding-left: 30px;
 
  }
 
+ .display-content{
+
+  display: none;
+
+ }
  .dashboard--profile-content .top{
 
   width: 100%;
@@ -1186,7 +1210,7 @@
   color: #444;
   display: flex;
   justify-content: space-between;
-  width: 59vw;
+  width: 60vw;
   align-items: flex-end;
 
   margin-top: 20px;
@@ -1204,7 +1228,7 @@
 
   display: flex;
   flex-wrap: wrap;
-  gap: 30px 20px;
+  gap: 20px 20px;
 
 }
 
@@ -1268,6 +1292,110 @@
   opacity: 0.6;
 
 }
+
+.license-certification-card{
+
+  display: flex;
+  width: 65vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10px;
+  background-color: rgb(84, 166, 166,0.7);
+  height: auto;
+  max-height: 8vh; /* Initial collapsed height */
+  overflow: hidden;
+  transition: max-height 0.6s ease; /* Transition applied to max-height */
+  padding: 2px;
+
+
+
+}
+
+
+.license-certification-card .top{
+  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  height: 8vh;
+  border-radius: 5px 5px 0px 0px;
+  margin-top: 0;
+  
+
+
+}
+
+.license-certification-card .top h3{
+
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: black;
+
+}
+
+.license-certification-card .top .right{
+
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 20px;
+  
+}
+
+
+
+.view-license-certificate-btn{
+
+  background-color: #54A6A6;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  border: none;
+  gap: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+
+
+}
+
+.view-license-certificate-btn img{
+
+  width: 20px;
+  height: 20px;
+}
+
+
+.licenses-certification-details{
+
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px 20px ;
+  gap: 5px;
+  border-radius: 0px 0px 5px 5px;
+  border: 1px solid rgb(84, 166, 166,0.7);
+
+
+}
+
+
+.licenses-certification-details p{
+
+  font-size: 1.5vw;
+
+}
+
+.licenses-certification-details p strong{
+
+  font-weight: 500;
+  color: #444;
+}
+
+
 
  /* Dashboard-profile-seeker CSS ends here */
 
@@ -1563,31 +1691,35 @@
  /* Provider Cards */
 
  .providers-grid {
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-   gap: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px 20px;
    margin: 20px 0;
+   padding : 20px 40px;
+   align-items: center;
+   justify-content: center;
+
  }
 
- .provider-card {
+ .browse-provider-card{
+
+   border: 1.5px solid #468585;
    padding: 20px;
-   border: 1px solid #ddd;
    border-radius: 8px;
-   text-align: center;
+   height: 300px;
+   width: 340px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+
  }
 
- .provider-card img {
-   width: 80px;
-   height: 80px;
-   border-radius: 50%;
-   margin-bottom: 10px;
- }
+ .provider-img {
+  height: 50%;
+  width: 50%;
+  border-radius: 5px;
+}
 
- .provider-card .provider-name {
-   font-size: 1.2rem;
-   color: #333;
-   margin-bottom: 5px;
- }
 
 
 
@@ -1620,7 +1752,115 @@
 
  /* Browse-providers css ends here */
 
+/* Specific Profile Page CSS starts here */
 
+.view-profile-section {
+
+  display: flex;
+  border: 1px solid red;
+  padding: 40px 70px;
+  height: 120vh;
+  gap: 30px;
+
+
+}
+
+.view-profile-left-panel {
+
+  height: 100%;
+  width: 30%;
+  border-width: 0px 1px 0px 0px;
+  border-color: black;
+  border-style: dashed;
+  /* border: 1px solid pink; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 20px;
+  align-items: center;
+
+}
+
+.view-provider-image {
+  width: 60%;
+  
+  border-radius: 8px;
+  margin-right: 20px;
+  height: 30%;
+
+}
+
+.view-provider-image img {
+
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+}
+
+.view-profile-name{
+
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+
+.request-service-btn{
+
+  padding: 5px 10px;
+  border: none;
+  background-color: #54A6A6;
+  color:white;
+  font-size: 1.1vw;
+  font-weight: 300;
+  border-radius: 5px;
+  margin-top: -15px;
+  cursor: pointer;
+
+}
+
+
+.view-profile-details-section{
+
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+
+
+
+.view-profile-detail-cont{
+
+  display: flex;
+  border: 2px solid #468585 ;
+  align-items: center;
+  padding: 5px 20px; 
+  border-radius: 5px;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+
+
+
+
+.profile-detail-text{
+
+  font-size: 1.5vw;
+}
+
+.view-profile-detail-cont span{
+
+  color: rgb(0, 0, 0, 0.6);
+  font-size: 1.3vw;
+}
+
+
+/* Specific Profile Page CSS ends here */
  /* Find Jobs Page css starts Here */
 
 
@@ -1901,11 +2141,12 @@
  footer {
 
    text-align: center;
-   margin-top: 40px;
+   margin-top: 30vh;
    display: flex;
    height: 35vh;
    flex-direction: column;
    align-items: center;
+
 
  }
 

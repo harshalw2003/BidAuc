@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
-    <script src="../JS/common-script.js"></script>
-    <title>Browse Providers | BidAuc</title>
+    <script src=".././JS/common-script.js"></script>
+    <title>Post a Job | BidAuc</title>
 </head>
 <body>
 
-     <!-- Header Section starts here -->
+   <!-- Header Section starts here -->
   <header> 
 
     <!-- Dash-Login Menu starts here -->
@@ -44,56 +44,63 @@
         </div>
       </header>
       <!-- Header Section ends here -->
+ 
 
-    <!-- Browse Providers Section -->
-    <section class="browse-providers container">
-        <div class="search-container">
-        <h1>Browse Providers</h1>
+    <!-- Job Posting Section -->
+    <section class="view-profile-section container">
+       
+<div class="view-profile-left-panel">
 
-            <div class="search-bar">
-                <input type="text" placeholder="Search Providers">
-                <img src="../../Assets/Images/search-icon.png" alt="">
-                
+            <div class="view-provider-image">
+                <img src="../../Assets/Images/Electrician.jpg" alt="Electrical Works">
             </div>
-            <div class="sort-options">
-                <span>Sort by</span>
-                <img src="../../Assets/Images/sort-icon.png" alt="Sort">
-            </div>
+            <h1 class="view-profile-name">Harshal Electrical Works</h1>
+
+            <button class="request-service-btn">Request Service
+            </button>
+
+        </div>
             
-        </div>
+            <div class="job-form">
 
-        <!-- Providers Grid -->
-        <div class="providers-grid">
-          <div class="browse-provider-card">
-            <img class="provider-img" src="../../Assets/Images/electrical-work-profile.jpg" alt="Provider 1">
-  
-            <h3 class="provider-name">Harshal Electrical works</h3>
-  
-  
-            <div class="providers-left-bottom">
-              <a href="../Templates/specific-provider-profile.html" class="view-profile-btn">View Profile</a>
-              <div class="rating">
-                <img src="../../Assets/Images/star-icon.png" alt="">
-                <p>4.5</p>
-                <span class="service-rating-p">service rating</span>
-              </div>
+                <h1 class="job-heading">Harshal's Details</h1>
+
+                <div class="view-profile-details-section">
+
+                    <div class="view-profile-detail-cont">
+                        <p class="profile-detail-text">Harshal Electrical Works</p>
+                        <span>Name</span>
+                    </div>
+                
+                
+
+                    <div class="view-profile-detail-cont" style="width: 48%;">
+                        <p class="profile-detail-text">Harshal Electrical Works</p>
+                        <span>Name</span>
+                    </div>
+                
+                
+
+                    <div class="view-profile-detail-cont" style="width: 48%;">
+                        <p class="profile-detail-text">Harshal Electrical Works</p>
+                        <span>Name</span>
+                    </div>
+                
+                
+
+                    <div class="view-profile-detail-cont">
+                        <p class="profile-detail-text">Harshal Electrical Works</p>
+                        <span>Name</span>
+                    </div>
+
+                </div>
+        
+
             </div>
-          </div>
-         
-          
-          
-            <!-- More provider cards -->
-        </div>
-
-        <!-- Pagination -->
-        <div class="pagination">
-            <a href="#">&lt;</a>
-            <span>1/2</span>
-            <a href="#">&gt;</a>
-        </div>
+        
     </section>
 
-    <!-- Featured Categories Section -->
+    <!-- Related Categories Section -->
     <section class="featured-categories">
 
         <div class="featured-categories-top">
@@ -127,9 +134,101 @@
     
       </section>
 
+    <!-- Top Providers Section -->
+    <section class="top-providers">
 
-      
-      <!-- Footer starts here -->
+        <div class="featured-categories-top">
+    
+          <h2 class="heading1">Top Providers</h2>
+          <a class="explore-providers-button button1" href="../Templates/browse-providers.html">Explore more Providers</a>
+    
+        </div>
+    
+        <div class="providers-cont">
+    
+          <div class="provider">
+    
+            <div class="provider-details-left">
+              <img src="../../Assets/Images/electrical-work-profile.jpg" alt="Provider 1">
+    
+              <h3 class="provider-name">Harshal Electrical works</h3>
+    
+    
+              <div class="providers-left-bottom">
+                <button class="view-profile-btn">View Profile</button>
+                <div class="rating">
+                  <img src="../../Assets/Images/star-icon.png" alt="">
+                  <p>4.5</p>
+                  <span class="service-rating-p">service rating</span>
+                </div>
+              </div>
+    
+    
+            </div>
+    
+            <div class="provider-details-right">
+              <p><strong>Service Categories:</strong> Electrical works</p>
+              <p><strong>Experience:</strong> 5 Years</p>
+              <p><strong>Licenses:</strong> State Board of Electrical works</p>
+    
+            </div>
+    
+          </div>
+          <div class="provider">
+    
+            <div class="provider-details-left">
+              <img src="../../Assets/Images/plumbing-work-profle.jpeg" alt="Provider 1">
+    
+              <h3 class="provider-name">Pratik Plumbing Works</h3>
+              <div class="providers-left-bottom">
+                <button class="view-profile-btn">View Profile</button>
+                <div class="rating">
+                  <img src="../../Assets/Images/star-icon.png" alt="">
+                  <p>4.5</p>
+                  <span class="service-rating-p">service rating</span>
+                </div>
+              </div>
+            </div>
+            <div class="provider-details-right">
+    
+              <p><strong>Service Categories:</strong> Electrical works</p>
+              <p><strong>Experience:</strong> 5 Years</p>
+              <p><strong>Licenses:</strong> State Board of Electrical works</p>
+    
+            </div>
+    
+          </div>
+          <div class="provider">
+    
+            <div class="provider-details-left">
+              <img src="../../Assets/Images/plumbing-work-profle.jpeg" alt="Provider 1">
+    
+              <h3 class="provider-name">Pratik Plumbing Works</h3>
+              <div class="providers-left-bottom">
+                <button class="view-profile-btn">View Profile</button>
+                <div class="rating">
+                  <img src="../../Assets/Images/star-icon.png" alt="">
+                  <p>4.5</p>
+                  <span class="service-rating-p">service rating</span>
+                </div>
+              </div>
+            </div>
+            <div class="provider-details-right">
+    
+              <p><strong>Service Categories:</strong> Electrical works</p>
+              <p><strong>Experience:</strong> 5 Years</p>
+              <p><strong>Licenses:</strong> State Board of Electrical works</p>
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <!-- Additional provider entries... -->
+      </section>    
+
+    <!-- Footer starts here -->
   <footer>
     <div class="footer-content">
       <div class="footer-upper-left">
@@ -160,7 +259,7 @@
     </div>
   </footer>
    <!-- Footer Ends Here -->
-   
+    
 
       <!-- Login And Register Section Starts here -->
 
@@ -272,7 +371,14 @@
 
       <button id="login-button" class="submit-button">Submit</button>
 
+
+
     </div>
+
+
+
+    
+
 
   </div>
 

@@ -123,36 +123,79 @@ const contentLoad = () => {
   const jobDropdownUp = document.querySelectorAll(".job-dropdown-up");
   console.log(jobDropdownUp);
   
-  for (let i = 0; i < jobDetailsCard.length; i++) {
+  for (let i = 0; i < jobDropdownDown.length; i++) {
   
     jobDropdownDown[i].addEventListener("click", (event) => {
       event.preventDefault();
       console.log("Dropdown Down Clicked");
   
-      // Expand the job detail card
-      jobDetailsCard[i].style.maxHeight = jobDetailsCard[i].scrollHeight + "px"; // Expands to the content's height
-      jobDetailsCard[i].style.backgroundColor = "transparent";
+      //Expand the job detail card
+      const extend_container = event.currentTarget.parentNode.parentNode.parentNode
+      extend_container.style.maxHeight = extend_container.scrollHeight + "px"; // Expands to the content's height
+      extend_container.style.backgroundColor = "transparent";
       event.currentTarget.style.display = "none";
       jobDropdownUp[i].style.display = "block";
+
+      console.log(extend_container)
+      // extend_container.style.backgroundColor="Transparent";
+      // extend_container.style.maxHeight=extend_container.scrollHeight + "px";
+
     });
   }
   
-  for (let i = 0; i < jobDetailsCard.length; i++) {
+  for (let i = 0; i < jobDropdownUp.length; i++) {
   
     jobDropdownUp[i].addEventListener("click", (event) => {
       event.preventDefault();
       console.log("Dropdown Up Clicked");
   
       // Collapse the job detail card
-      jobDetailsCard[i].style.maxHeight = "8vh"; // Collapses back to 8vh
-      jobDetailsCard[i].style.backgroundColor = "rgb(84, 166, 166, 0.6)";
+      const extend_container = event.currentTarget.parentNode.parentNode.parentNode
+      extend_container.style.maxHeight = "8vh"; // Collapses back to 8vh
+      extend_container.style.backgroundColor = "rgb(84, 166, 166, 0.6)";
       event.currentTarget.style.display = "none";
       jobDropdownDown[i].style.display = "block";
     });
   }
+
+
+  const job_link_tabs = document.querySelectorAll(".job-link")
+
+
+  console.log(job_link_tabs)
+
+  job_link_tabs.forEach( (tab) => {
+
+    tab.addEventListener("click", (event) => {
+      event.preventDefault();
+      console.log("Tab Clicked");
+      const display_container = event.currentTarget.getAttribute("target")
+      console.log(display_container)
+      //remove active class from all other tabs
+      job_link_tabs.forEach( (tab) => {
+        tab.classList.remove("active")
+      })
+      event.currentTarget.classList.add("active")
+
+      const containers = document.querySelectorAll(".display-container")
+      containers.forEach( (container) => {
+       container.style.display = "none"
+      })
+
+      //display target container
+      document.getElementById(display_container).style.display = "flex";
+      //hide all other containers
+      
+
+
+
+  })
+})
+
+}
   
   
-};
+
 
 
 document.addEventListener("DOMContentLoaded", contentLoad);
