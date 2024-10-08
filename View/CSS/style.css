@@ -33,7 +33,6 @@
    display: flex;
    align-items: center;
    background-color: #fff;
-   border: 1px solid red;
    padding-left: 20vw;
    height: 10vh;
    
@@ -295,6 +294,7 @@
 
    display: flex;
    flex-direction: column;
+
  }
 
  .stats .stat-item h2 {
@@ -372,13 +372,12 @@
    height: fit-content;
    gap: 1.2vw;
    flex-wrap: wrap;
-   border: 1px solid red;
 
  }
 
  .category-item {
    width: 17vw;
-   height: 20vw;
+   height: 18vw;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -449,7 +448,7 @@
 
    display: flex;
    flex-direction: column;
-   gap: 10px;
+   gap: 1vw;
    padding: 1.3vw;
    width: 50%;
 
@@ -506,6 +505,7 @@
    height: 100%;
    gap: 1vw;
    width: 40%;
+   line-height: 1;
 
  }
 
@@ -518,7 +518,7 @@
 
  .rating p {
 
-   font-size: 1.2vw;
+   font-size: 1.5vw;
    /* border: 1px solid red; */
 
  }
@@ -528,7 +528,7 @@
    font-size: 1.3vw;
    color: black;
    font-weight: 500;
-   margin-top: -0.7vw;
+   margin-top: -0.8vw;
 
  }
 
@@ -593,7 +593,6 @@
  .dashboard-container {
 
    padding: 20px 20px;
-   border: 1px solid red;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -604,14 +603,16 @@
  .dashboard-welcome-container {
 
    background-color: #86c1c1;
-   padding: 20px;
+   padding: 2vw 0vw 1.2vw 0vw;
    border-radius: 10px;
    text-align: center;
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 10vh;
+   /* gap: 5vw; */
    width: 100%;
+   height: 20vw;
+   justify-content: space-between;
    
 
  }
@@ -636,6 +637,7 @@
   .dash-welcome-text p {
    color: #333;
    font-size: 1.5vw;
+
  }
 
 
@@ -643,18 +645,19 @@
  .dashboard-tabs {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  height: 35px;
+  /* margin-top: 3vw; */
+  height: 2.5vw;
   width: fit-content;
-  gap: 20px;
- background-color: rgb(0, 0, 0,0.1);
+  gap: 1.5vw;
+ background-color: #0000001a;
  border-radius: 10px;
+
 
 }
 
 .dashboard-tabs .tab-link {
 
-  padding: 10px 40px;
+  padding: 0 3vw;
   border: none;
   background-color: transparent;
   border-radius: 10px;
@@ -663,8 +666,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: large;
+  font-size: 1.5vw;
   font-weight: 200;
+  height: 100%;
+  
 
   
 }
@@ -688,10 +693,10 @@
 
   background-color: rgb(246, 251, 122,0.3);
   color: rgb(0, 0, 0, 0.75);
-  width: 40vh;
-  height: 55vh;
+  width: 20vw;
+  height: 28vw;
   margin-left: 20px;
-  margin-top: -50px;
+  margin-top: -5vw;
   border-radius: 6px;
   display: flex;
   align-content: center;
@@ -724,7 +729,7 @@
 
    display: flex;
    justify-content: space-around;
-   margin-top: 20px;
+   margin-top: 2vw;
    width: 75vw;
    flex-wrap: wrap;
    /* margin-left: 20px; */
@@ -741,8 +746,8 @@
    /* padding: 20px; */
    text-align: center;
    border-radius: 10px;
-   width: 360px;
-   height: 150px;
+   width: 23vw;
+   height: 11vw;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -812,10 +817,10 @@
    padding: 20px;
    text-align: center;
    border-radius: 10px;
-   width: 550px;
-   height: 150px;
+   width: 35.5vw;
+   height: 11vw;
    border: 1px solid #ddd;
-   margin-top: 15px;
+   margin-top: 1.8vw;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -867,8 +872,7 @@
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+  gap: 1vw;
 
  }
 
@@ -876,9 +880,9 @@
 
   display: flex;
   align-items: center;
-  /* padding: 10px; */
-  justify-content: space-between;
-  width: 90%;
+  justify-content: flex-start;
+  width: 100%;
+
 
 
  }
@@ -892,9 +896,10 @@
 
  .job-link img{
 
-  width: 6px;
-  height: 6px;
+  width: 0.6vw;
+  height: 0.6vw;
   display: none;
+
 
 
  }
@@ -910,7 +915,7 @@
   width: 30px;
   height: 1px;
   background-color: black;
-  margin-left: 30px;
+  margin-left: 2.1vw;
 
  }
 
@@ -1115,18 +1120,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
-  margin-top: 60px;
-  padding: 20px;
+  height: 30vw;
+  margin-top: 7vw;
+  padding: 2vw;
   border-radius: 10px;
   flex-direction: column;
-  gap: 40px;
+  gap: 2vw;
+  
 
  }
  .user-profile-img{
 
-  width: 150px;
-  height: 150px;
+  width: 15vw;
+  height: 15vw;
   background-color: rgb(70, 133, 133,0.1);
   border-radius: 5px;
   position: relative;
@@ -1145,8 +1151,8 @@
 
   position: absolute;
   background-color: #468585;
-  width: 30px;
-  height: 30px;
+  width: 3vw;
+  height: 3vw;
   border-radius: 50%;
   bottom: -10px;
   right: -10px;
@@ -1156,7 +1162,7 @@
 
  .user-profile-name{
 
-  font-size: 2vw;
+  font-size: 1.8vw;
   font-weight: 500;
  }
 
@@ -1199,7 +1205,7 @@
 
   width: 75vw;
   flex-direction: column;
-  padding-left: 30px;
+  padding-left: 3vw;
 
  }
 
@@ -1211,15 +1217,14 @@
  .dashboard--profile-content .top{
 
   width: 100%;
-  padding: 10px 0px;
+  padding: 1vw 0px;
   height: fit-content;
   color: #444;
   display: flex;
   justify-content: space-between;
   width: 60vw;
   align-items: flex-end;
-
-  margin-top: 20px;
+  margin-top: 2vw;
 
  }
 
@@ -1234,7 +1239,7 @@
 
   display: flex;
   flex-wrap: wrap;
-  gap: 20px 20px;
+  gap: 2vw 2vw;
 
 }
 
@@ -1242,7 +1247,7 @@
 
   display: flex;
   flex-direction: column;
-  width: 900px;
+  width: 90%;
 
 
 }
@@ -1257,13 +1262,13 @@
 
 .dashboard--profile-content .content .profile-detail-cont:nth-child(-n+2){
 
-  width: 440px;
+  width: 43.5%;
 
 
 }
 .dashboard--profile-content .content .profile-detail-cont:nth-last-child(-n+2){
 
-  width: 440px;
+  width: 43.5%;
 
 
 }
@@ -1273,7 +1278,7 @@
   display: flex;
   border: 2px solid #468585 ;
   align-items: center;
-  padding: 5px 10px; 
+  padding: 0.5vw 1vw; 
   border-radius: 5px;
   width: 100%;
   justify-content: space-between;
@@ -1293,8 +1298,8 @@
 
 .dashboard--profile-content .content .profile-detail-cont div img{
 
-  width: 25px;
-  height: 25px;
+  width: 2vw;
+  height: 2vw;
   opacity: 0.6;
 
 }
@@ -1311,7 +1316,7 @@
   max-height: 8vh; /* Initial collapsed height */
   overflow: hidden;
   transition: max-height 0.6s ease; /* Transition applied to max-height */
-  padding: 2px;
+  padding: 0.1vw;
 
 
 
@@ -1629,6 +1634,7 @@
    padding: 20px 40px;
    height: 12vh;
    align-items: center;
+   margin-top: 5vh;
  }
 
  .search-container h1 {
@@ -1697,11 +1703,12 @@
  /* Provider Cards */
 
  .providers-grid {
+
    display: flex;
    flex-wrap: wrap;
-   gap: 30px 20px;
+   gap: 2.5vw 2.5vw;
    margin: 20px 0;
-   padding : 20px 40px;
+   padding : 2vw 2vw;
    align-items: center;
    justify-content: center;
 
@@ -1712,8 +1719,8 @@
    border: 1.5px solid #468585;
    padding: 20px;
    border-radius: 8px;
-   height: 300px;
-   width: 340px;
+   height: 20vw;
+   width: 25vw;
    display: flex;
    flex-direction: column;
    gap: 10px;
@@ -1763,7 +1770,6 @@
 .view-profile-section {
 
   display: flex;
-  border: 1px solid red;
   padding: 40px 70px;
   height: 120vh;
   gap: 30px;
@@ -1813,14 +1819,14 @@
 
 .request-service-btn{
 
-  padding: 5px 10px;
+  padding: 0.5vw 1.5vw;
   border: none;
   background-color: #54A6A6;
   color:white;
   font-size: 1.1vw;
   font-weight: 300;
   border-radius: 5px;
-  margin-top: -15px;
+  margin-top: -1.5vw;
   cursor: pointer;
 
 }
@@ -1828,10 +1834,11 @@
 
 .view-profile-details-section{
 
-  width: 800px;
+  width: 60vw;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 2vw;
+
 }
 
 
@@ -1843,7 +1850,7 @@
   display: flex;
   border: 2px solid #468585 ;
   align-items: center;
-  padding: 5px 20px; 
+  padding: 0.5vw 2vw; 
   border-radius: 5px;
   width: 100%;
   justify-content: space-between;
@@ -1862,6 +1869,47 @@
 .view-profile-detail-cont span{
 
   color: rgb(0, 0, 0, 0.6);
+  font-size: 1.3vw;
+}
+
+
+.license-certification-show-card{
+
+  width: 100%;
+  border: 2px solid #468585;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+}
+
+.license-certification-show-card .top{
+
+  background-color: rgb(70, 133, 133,1);
+  border-radius: 10px 10px 0px 0px;
+  padding: 0.2vw 1vw;
+  width: 100%;
+
+}
+
+.license-certification-show-card .top p{
+
+  font-size: 1.5vw;
+  color: white;
+
+}
+
+.license-certification-show-card .bottom{
+
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+
+
+}
+
+.license-certification-show-card .bottom p{
+
   font-size: 1.3vw;
 }
 
@@ -1891,15 +1939,15 @@
 
  .job-card {
 
-   border: 0.3px solid rgb(0, 0, 0,0.);
+   border: 0.3px solid rgb(0, 0, 0,0.1);
    border-radius: 8px;
-   padding: 20px;
-   margin-bottom: 20px;
+   padding: 2vw;
+   margin-bottom: 2vw;
    background-color: #fff;
    width: 80%;
    justify-content: flex-start;
-   gap: 30px;
-   height: 37vh;
+   gap: 2vw;
+   height: 19vw;
    overflow: hidden;
 
  }
@@ -1922,11 +1970,14 @@
   background-color: transparent;
   border: 1px solid #468585;
   color: #468585;
-  padding: 5px 15px;
+  padding: 1vw 1.5vw;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
-  height: 30px;
+  height: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
 }
 
