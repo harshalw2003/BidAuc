@@ -36,11 +36,19 @@ const jobSchema = new mongoose.Schema([{
     postedBy :{
 
         type : mongoose.Schema.Types.ObjectId,
-        ref : 'user'
+        ref : 'user',
+        required: true,
+    },
+    status :{
+
+        type : String,
+        required: true,
+        enum: ['pending', 'active', 'completed', 'cancelled']
     },
     provider :{
         type : mongoose.Schema.Types.ObjectId,
-        ref : 'user'
+        ref : 'user',
+        required: false,
     },
 
   
