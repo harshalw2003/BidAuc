@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/CSS/style.css">
+    <script src="../static/JS/common-script.js"></script>
+  <script src="../static/JS/login-register.js"></script>
+
+
+    <title>Dashboard | BidAuc</title>
+</head>
+<body>
+   <!-- Header Sections starts here -->
+   <header>
+    <!-- Dash-Login Menu starts here -->
+
+    <div id="dash-login-menu">
+      <a href="http://localhost:5000/dashboard/dashboard-overview" id="dashboard-button">Dashboard</a>
+      <hr style="width: 100%; height:1px;
+     background-color: white;">
+      <a href="" id="login-popup-open">Login</a>
+      <hr style="width: 100%; height:1px;
+     background-color: white;">
+      <a href="" id="logout-btn">Logout</a>
+    </div>
+
+    <!-- Dash-Login Menu ends here -->
+<div class="navbar">
+      <div class="logo">
+        <img src="../static/Assets/Images/BidAuc-logo.png" alt="BidAuc Logo">
+      </div>
+      <div class="location-dropdown">
+        <img src="../static/Assets/Images/location-icon.png" alt="" class="location-icon">
+        <select>L
+          <option>User's Location</option>
+        </select>
+      </div>
+      <nav>
+        <a href="../Templates/home.html">Home</a>
+        <a href="#">About us</a>
+      </nav>
+      <div class="profile-icon" id="profile-button">
+        <img src="../static/Assets/Images/user-icon.png" alt="Profile Icon">
+      </div>
+    </div>
+  </header>
+  <!-- Header Section ends here -->
+
+
+    <div class="dashboard-container">
+        <div class="dashboard-welcome-container">
+            <div class="dash-welcome-text">
+              <h2>Welcome back Harshal,</h2>
+            <p>Great to see you again! Let's get started on your next job.</p>
+            </div>
+
+
+            <div class="dashboard-tabs">
+              <a href="../Templates/dashboard-provider.html" class="tab-link" >Overview</a>
+              <a href="../Templates/dashboard-jobs-provider.html" class="tab-link">Jobs</a>
+              <a href="../Templates/dashboard-profile-provider.html" class="tab-link">Profile</a>
+              <a href="../Templates/dashboard-notification-common.html" class="tab-link" style="background-color: rgb(0, 0, 0,0.15);">Notifications</a>
+          </div>
+
+        </div>
+        <div class="dashboard-body">
+
+
+        <div class="sidebar-quote">
+
+          <div id="page-link">
+
+            /dashboard/notifications
+
+          </div>
+          <p>
+            "Connecting those in need with those who deliver - where quality service meets those who seek it."
+          </p>
+        </div>
+
+        <div class="dashboard--profile-content">
+
+
+          <div class="top">
+
+            <h2>NOTIFICATIONS...</h2>
+            
+          </div>
+
+          <div class="content">
+
+            <div class="notification-cont">
+              <p class="notification-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam animi nulla Ipsam animi nulla adhfs nulla
+              
+              </p>
+              <button class="notification-learMore-btn">Learn more</button>
+                <button class="notification-delete-btn"><img src="../static/Assets/Images/delete-icon.png" alt=""></button>
+            </div>
+            <div class="notification-cont">
+              <p class="notification-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam animi nulla Ipsam animi nulla adhfs nulla
+              
+              </p>
+              <button class="notification-learMore-btn">Learn more</button>
+                <button class="notification-delete-btn"><img src="../static/Assets/Images/delete-icon.png" alt=""></button>
+            </div>
+            <div class="notification-cont">
+              <p class="notification-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam animi nulla Ipsam animi nulla adhfs nulla
+              
+              </p>
+              <button class="notification-learMore-btn">Learn more</button>
+                <button class="notification-delete-btn"><img src="../static/Assets/Images/delete-icon.png" alt=""></button>
+            </div>
+
+          
+          </div>
+
+
+          <hr style="width: 20%; height: 1px; background-color: #468585; margin-top: 50px; margin-left: 30%;">
+            
+            
+         
+        </div>
+
+      </div>
+
+       
+    </div>
+
+   <!-- Footer starts here -->
+   <footer>
+    <div class="footer-content">
+      <div class="footer-upper-left">
+        <div class="footer-logo">
+          <img src="../static/Assets/Images/BidAuc-logo.png" alt="Footer Logo">
+        </div>
+        <p>Connecting those in <span>need </span> with those who <span> deliver </span></p>
+
+      </div>
+      <div class="footer-upper-right">
+        
+          <a href="../Templates/browse-categories.html">Find a service</a>
+          <a href="../Templates/browse-providers.html">Browse Providers</a>
+          <a href="../Templates/browse-categories.html">Browse Categories</a>
+          <a href="../Templates/browse-categories.html">Post Jobs</a>
+          <a href="../Templates/find-jobs.html">Become a Provider</a>
+          <a href="../Templates/find-jobs.html">Browse Jobs</a>
+       
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; 2024 BidAuc.com All rights reserved</p>
+
+      <div class="footer-bottom-right">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </footer>
+   <!-- Footer Ends Here -->
+      <!-- Login And Register Section Starts here -->
+
+  <div class="login-register-section" id="login-register-section">
+
+
+    <div class="common-cont log-reg-cont" id="choose-reg-cont">
+
+      <div class="close-log-reg-button" target="choose-reg-cont">
+        <img src="../../Assets/Images/close-icon.png" alt="">
+      </div>
+
+      <h3 class="log-reg-heading">
+        Register As
+      </h3>
+
+      <button class="choose-user-button" id="seeker-register-btn">Service Seeker</button>
+      <button class="choose-user-button" id="provider-register-btn">Service Provider</button>
+
+      <p>Already have an Account?</p>
+
+      <button id="login-button" class="submit-button">Login</button>
+    </div>
+    
+    <div class="login-cont log-reg-cont" id="login-cont" >
+
+      <div class="close-log-reg-button" target="login-cont">
+        <img src="../../Assets/Images/close-icon.png" alt="">
+      </div>
+
+      <h3 class="log-reg-heading">
+        Log in
+      </h3>
+
+      <div class="log-reg-input ">
+        <input type="tel"  id="login-phone" placeholder="Your Phone">
+        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
+      </div>
+      
+      <div class="log-reg-input">
+        <input type="number"  id="login-otp" placeholder="Enter OTP">
+        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
+      </div>
+
+      <button id="login-button" class="submit-button">Login</button>
+
+
+      
+
+    </div>
+
+    <div class=" log-reg-cont" id="register-provider-cont">
+
+      <div class="close-log-reg-button" target="register-provider-cont">
+        <img src="../../Assets/Images/close-icon.png" alt="">
+      </div>
+      
+
+      <h3 class="log-reg-heading" style="font-size: 1.2vw;">
+        Register as Service Provider
+      </h3>
+
+      <div class="log-reg-input">
+        <input type="text"  id="register-name" placeholder="Your Name" >
+      </div>
+
+      <div class="log-reg-input">
+        <input type="tel"  id="login-phone" placeholder="Your Phone">
+        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
+      </div>
+      
+      <div class="log-reg-input">
+        <input type="number"  id="login-otp" placeholder="Enter OTP" >
+        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
+       
+      </div>
+      <button id="login-button" class="submit-button">Submit</button>
+
+
+      
+
+
+    </div>
+
+    <div class=" log-reg-cont" id="register-seeker-cont">
+
+      <div class="close-log-reg-button" target="register-seeker-cont">
+        <img src="../../Assets/Images/close-icon.png" alt="">
+      </div>
+
+      <h3 class="log-reg-heading" style="font-size: 1.2vw;">
+        Register as Service Seeker
+      </h3>
+
+      <div class="log-reg-input">
+        <input type="text"  id="register-name" placeholder="Your Name" >
+       
+      </div>
+      <div class="log-reg-input">
+        <input type="tel"  id="login-phone" placeholder="Your Phone" >
+        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
+      </div>
+      
+      <div class="log-reg-input">
+        <input type="number"  id="login-otp" placeholder="Enter OTP" >
+        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
+       
+      </div>
+
+      <button id="login-button" class="submit-button">Submit</button>
+
+
+
+    </div>
+
+
+
+    
+
+
+  </div>
+
+  <!-- Login and Register Section ends here -->
+</body>
+</html>
