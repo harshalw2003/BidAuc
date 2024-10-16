@@ -12,6 +12,7 @@ const jobSchema = new mongoose.Schema([{
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref : 'category'
+
     },
     urgency: {
         type: String,
@@ -27,7 +28,6 @@ const jobSchema = new mongoose.Schema([{
         required: false,
        
     },
-
     AdditionalInformation: {
         type : String,
         required: false,
@@ -62,6 +62,6 @@ const jobSchema = new mongoose.Schema([{
 
 
 
-const jobModel= mongoose.model('job', ,jobSchemaSchema);
+const jobModel= mongoose.model('job',jobSchema);
 
 module.exports =jobModel;

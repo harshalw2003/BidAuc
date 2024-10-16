@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const homeRoutes = require('./Routes/homeRoutes.js');
 const userRoutes = require('./Routes/userRoutes.js'); 
 const dashboardRoutes = require('./Routes/dashboardRoutes.js');
+const categoryRoutes = require('./Routes/categoryRoutes.js');
 
 
 
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(homeRoutes)
 app.use('/user',userRoutes)
 app.use('/dashboard',dashboardRoutes)
+app.use('/category',categoryRoutes)
 
 
 

@@ -368,18 +368,19 @@
 
  .categories {
 
-   padding: 5vh 4vw;
+   padding: 5vh ;
    display: flex;
-   /* justify-content: space-between; */
+   align-items: center;
+   justify-content: center;
    width: 100%;
-   height: fit-content;
-   gap: 1.2vw;
+   height: fit-content; 
    flex-wrap: wrap;
+   gap: 2vw 3vw;
 
  }
 
  .category-item {
-   width: 17vw;
+   width: 18vw;
    height: 18vw;
    display: flex;
    align-items: center;
@@ -389,6 +390,8 @@
    /* border: 1px solid blue; */
    gap: 10px;
    margin-bottom: 2vh;
+   cursor: pointer;
+
 
  }
 

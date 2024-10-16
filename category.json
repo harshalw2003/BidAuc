@@ -1,0 +1,112 @@
+[
+    {
+        "categoryName": "Plumbing",
+        "image" : "../static/Assets/categoryImages/plumbing.jpg"
+        
+    },
+    {
+        "categoryName": "Electrical Works",
+        "image" : "../static/Assets/categoryImages/electricalWorks.jpg"
+       
+    },
+    {
+        "categoryName": "Carpentry",
+        "image" : "../static/Assets/categoryImages/carpentry.jpg"
+    },
+    {
+        "categoryName": "Painting",
+        "image" : "../static/Assets/categoryImages/painting.jpg"
+    },
+    {
+        "categoryName": "Appliance Repair",
+        "image" : "../static/Assets/categoryImages/applianceRepair.jpg"
+        
+    },
+    {
+        "categoryName": "Residential Cleaning",
+        "image" : "../static/Assets/categoryImages/residentialCleaning.jpg"
+        
+    },
+    {
+        "categoryName": "Commercial Cleaning",
+        "image" : "../static/Assets/categoryImages/commercialCleaning.jpg"
+        
+    },
+    {
+        "categoryName": "Disinfection Services",
+        "image" : "../static/Assets/categoryImages/disinfectionServices.jpg"
+        
+    },
+    {
+        "categoryName": "Pool Cleaning and Maintenance",
+        "image" : "../static/Assets/categoryImages/poolCleaning.jpg"
+        
+    },
+    {
+        "categoryName": "Lawn Care and Mowing",
+        "image" : "../static/Assets/categoryImages/lawnCare.jpg"
+        
+    },
+    {
+        "categoryName": "Gardening",
+        "image" : "../static/Assets/categoryImages/gardening.jpg"
+        
+    },
+    {
+        "categoryName": "Tree Trimming and Removal",
+        "image" : "../static/Assets/categoryImages/treeTrimming.jpg"
+        
+    },
+    {
+        "categoryName": "Residential Moving",
+        "image" : "../static/Assets/categoryImages/residentialMoving.jpg"
+        
+    },
+    {
+        "categoryName": "Commercial Moving",
+        "image" : "../static/Assets/categoryImages/commercialMoving.jpg"
+        
+    },
+    
+    {
+        "categoryName": "Packing and Unpacking",
+        "image" : "../static/Assets/categoryImages/packingUnpacking.jgp"
+        
+    },
+    {
+        "categoryName": "Welding",
+        "image" : "../static/Assets/categoryImages/welding.webp"
+        
+    },
+    {
+        "categoryName": "Metal Fabrication",
+        "image" : "../static/Assets/categoryImages/metalFabrication.jpg"
+        
+    },
+    {
+        "categoryName": "Machinery Repair",
+        "image" : "../static/Assets/categoryImages/machineryRepair.jpg"
+        
+    },
+    {
+        "categoryName": "Loading and Unloading",
+        "image" : "../static/Assets/categoryImages/loadingUnloading.png"
+        
+    },
+    {
+        "categoryName": "Pet Grooming",
+        "image" : "../static/Assets/categoryImages/petGrooming.webp"
+        
+    },
+    {
+        "categoryName": "Water Damage Restoration",
+        "image" : "../static/Assets/categoryImages/waterDamageRestoration.jpg"
+        
+    }
+    ,
+    {
+        "categoryName": "Fire Damage Restoration",
+        "image" : "../static/Assets/categoryImages/fireDamageRestoration.webp"
+        
+    }
+]

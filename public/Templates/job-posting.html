@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../static/CSS/style.css">
     <script src="../static/JS/common-script.js"></script>
   <script src="../static/JS/login-register.js"></script>
+  <script src="../static/JS/jobPosting.js"></script>
 
     <title>Post a Job | BidAuc</title>
 </head>
@@ -14,32 +15,37 @@
    <!-- Header Section starts here -->
    <header>
     <!-- Dash-Login Menu starts here -->
-        <div id="dash-login-menu">
-            <a href="../Templates/dashboard-seeker.html" id="dashboard-button">Dashboard</a>
-            <a href="" id="login-popup-open">Login</a>
-          </div>
-    
+
+    <div id="dash-login-menu">
+      <a href="http://localhost:5000/dashboard/dashboard-overview" id="dashboard-button">Dashboard</a>
+      <hr style="width: 100%; height:1px;
+     background-color: white;">
+      <a href="" id="login-popup-open">Login</a>
+      <hr style="width: 100%; height:1px;
+     background-color: white;">
+      <a href="" id="logout-btn">Logout</a>
+    </div>
+
     <!-- Dash-Login Menu ends here -->
-    
-        <div class="navbar">
-          <div class="logo">
-            <img src="../../Assets/Images/BidAuc-logo.png" alt="BidAuc Logo">
-          </div>
-          <div class="location-dropdown">
-            <img src="../../Assets/Images/location-icon.png" alt="" class="location-icon">
-            <select>
-              <option>User's Location</option>
-            </select>
-          </div>
-          <nav>
-            <a href="../Templates/home.html">Home</a>
-            <a href="#">About us</a>
-          </nav>
-          <div class="profile-icon" id="profile-button">
-            <img src="../../Assets/Images/user-icon.png" alt="Profile Icon">
-          </div>
-        </div>
-      </header>
+<div class="navbar">
+      <div class="logo">
+        <img src="../static/Assets/Images/BidAuc-logo.png" alt="BidAuc Logo">
+      </div>
+      <div class="location-dropdown">
+        <img src="../static/Assets/Images/location-icon.png" alt="" class="location-icon">
+        <select>L
+          <option>User's Location</option>
+        </select>
+      </div>
+      <nav>
+        <a href="../Templates/home.html">Home</a>
+        <a href="#">About us</a>
+      </nav>
+      <div class="profile-icon" id="profile-button">
+        <img src="../static/Assets/Images/user-icon.png" alt="Profile Icon">
+      </div>
+    </div>
+  </header>
       <!-- Header Section ends here -->
  
 
@@ -48,9 +54,9 @@
        
   <div class="job-posting-left-panel">
 
-        <h1 class="category-heading">Electrical Works</h1>
-            <div class="category-image">
-                <img src="../../Assets/Images/Electrician.jpg" alt="Electrical Works">
+        <h1 class="category-heading" id="jobPostingCategoryName">Electrical Works</h1>
+            <div class="category-image" >
+                <img id="jobPostingCategoryImage" src="../../Assets/Images/Electrician.jpg" alt="Electrical Works">
             </div>
 
         </div>
@@ -59,7 +65,7 @@
 
                 <h1 class="job-heading">Enter Job Details</h1>
                 <input type="text" placeholder="Job Name" required>
-                <input type="text" placeholder="Category Name" required>
+                <input type="text" id="jobPostingCategoryNameInput" placeholder="Category Name" required>
                 <input type="text" placeholder="Urgency (e.g. 2-3 days)">
                 <input type="file" placeholder="Upload Job Images">
                 <textarea placeholder="Job Description"></textarea>
