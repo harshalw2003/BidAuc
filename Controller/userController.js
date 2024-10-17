@@ -12,20 +12,6 @@ const dotenv = require('dotenv');
 dotenv.config()
 
 
-// Set up multer for file uploads
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, './public/static/user-profiles');
-  },
-  filename: function (req, file, cb) {
-    cb(null, `${Date.now()}${req.user.name}-profile${path.extname(file.originalname)}`);
-  }
-});
-
-
-const upload = multer({ storage: storage });
-
-
 
 const generateOtp = async(req, res) =>{
   console.log("Generate OTP API hit")
@@ -200,20 +186,29 @@ const loginUser = async (req, res) => {
   }
 };
 
+
+
 const updateDetails = async (req, res) => {
 
   console.log("User update details API hit")
-  const updatedDetails = req.body
-  console.log(updatedDetails)
+  try {
+  console.log(JSON.stringify(req.body))
   const user = req.user
   console.log(user)
-  await userModel.findByIdAndUpdate(user._id, updatedDetails)
+  // await userModel.findByIdAndUpdate(user._id, updatedDetails)
   // update.save()
   res.json({
     success: true,
     message: "User details updated successfully",
-    updatedDetails: updatedDetails
+    
+    
   })
+  }catch (err) {
+
+    res.json({
+      success: false,
+      message: err.message})
+  }
 
 }
 
@@ -232,7 +227,7 @@ const uploadProfile = async (req, res) => {
   } catch (error) {
     res.status(400).json(
       {
-        sucess : false,
+        success : false,
         message : 'Error uploading file'}
     );
   }
@@ -272,7 +267,5 @@ module.exports = {
   uploadProfile,
   logoutUser,
   updateDetails,
-
-  upload,
 
 }

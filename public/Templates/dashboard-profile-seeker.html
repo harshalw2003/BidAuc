@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../static/CSS/style.css">
     <script src="../static/JS/common-script.js"></script>
   <script src="../static/JS/login-register.js"></script>
+  <script src="../static/JS/commonProfile.js"></script>
 
 
     <title>Dashboard | BidAuc</title>
@@ -195,63 +196,62 @@
           <span class="close-btn " id="update-profile-close-btn">&times;</span>
       </div>
 
-      <form class="update-form">
-          <!-- Personal Details -->
-          <h3>Personal Details ></h3>
-          <div class="personal-details">
-              <div class="form-row">
-                  <div class="form-group">
-                      <label for="firstName">First Name</label>
-                      <input type="text" id="firstName" value="Harshal">
-                  </div>
-                  <div class="form-group">
-                      <label for="lastName">Last Name</label>
-                      <input type="text" id="lastName" value="Warukar">
-                  </div>
-              </div>
-
-              <div class="form-row">
-                  <div class="form-group">
-                      <label for="phone">Phone</label>
-                      <input type="text" id="phone" value="9766629195">
-                  </div>
-                  <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="email" id="email" value="harshal@gmail.com">
-                  </div>
-              </div>
-
-              <div class="form-row">
-                  <div class="form-group">
-                      <label for="address1">Address Line 1</label>
-                      <input type="text" id="address1">
-                  </div>
-                  <div class="form-group">
-                      <label for="address2">Address Line 2</label>
-                      <input type="text" id="address2">
-                  </div>
-              </div>
-
-              <div class="form-row">
-                  <div class="form-group">
-                      <label for="landmark">Landmark</label>
-                      <input type="text" id="landmark">
-                  </div>
-                  <div class="form-group">
-                      <label for="city">City</label>
-                      <input type="text" id="city" value="Nagpur">
-                  </div>
-                  <div class="form-group">
-                      <label for="zip">Zip Code</label>
-                      <input type="text" id="zip" value="440036">
-                  </div>
-              </div>
-          </div>
-
-        
-
-          <button type="submit" class="submit-btn">Submit</button>
-      </form>
+      <form class="update-form" id="updateForm" enctype="multipart/form-data">
+        <!-- Personal Details -->
+        <h3>Personal Details ></h3>
+        <div class="personal-details">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name" >
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" name="phone" id="phone" placeholder="Phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="address1">Address Line 1</label>
+                    <input type="text" name="address1" id="address1">
+                </div>
+                <div class="form-group">
+                    <label for="address2">Address Line 2</label>
+                    <input type="text" name="address2" id="address2">
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="landmark">Landmark</label>
+                    <input type="text" name="landmark" id="landmark">
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city" value="Nagpur">
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" name="zip" id="zip" value="440036">
+                </div>
+            </div>
+        </div>
+    
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    
   </div>
 
     <!-- Update Profile Sections Ends here -->

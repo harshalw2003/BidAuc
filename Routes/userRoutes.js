@@ -10,6 +10,7 @@ router.post("/generateOtp", userController.generateOtp)
 router.post('/register',userController.registerUser)
 router.post('/login',userController.loginUser)
 router.post('/logout',authMiddleware.authenticateToken,userController.logoutUser)
+router.post('/updateDetails', authMiddleware.authenticateToken, userController.updateDetails);
 // router.post('/upload-profile',authMiddleware.authenticateToken,userController.upload.single('profilePicture'), userController.uploadProfile)
 // // router.post('/update',userController.login)
 // router.post('/updateDetail',authMiddleware.authenticateToken,userController.updateDetails)

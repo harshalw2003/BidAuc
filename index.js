@@ -14,6 +14,7 @@ const homeRoutes = require('./Routes/homeRoutes.js');
 const userRoutes = require('./Routes/userRoutes.js'); 
 const dashboardRoutes = require('./Routes/dashboardRoutes.js');
 const categoryRoutes = require('./Routes/categoryRoutes.js');
+const jobRoutes = require('./Routes/jobRoutes.js');
 
 
 
@@ -26,6 +27,7 @@ app.use(homeRoutes)
 app.use('/user',userRoutes)
 app.use('/dashboard',dashboardRoutes)
 app.use('/category',categoryRoutes)
+app.use('/job',jobRoutes)
 
 
 

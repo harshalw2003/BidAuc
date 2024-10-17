@@ -43,4 +43,35 @@ document.addEventListener("DOMContentLoaded", () => {
    .catch((error) => {
         console.log(error);
     });
+
+
+
+    const jobPostingForm = document.querySelector('#jobPostingForm');
+    jobPostingForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        
+        const form = document.getElementById('jobPostingForm');
+        const formData = new FormData(form); // Create FormData object from the form
+        console.log(JSON.stringify(formData));
+        console.log("Form Submitted");
+        // Fetch call to the backend to submit the form data
+        fetch('http://localhost:5000/job/create', {
+            method: 'POST',
+            body: formData // send the formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Job posted successfully!");
+                window.location.reload();
+            } else {
+                alert("Error posting job: " + data.message);
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
+
+    
 });

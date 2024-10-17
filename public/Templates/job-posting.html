@@ -61,17 +61,17 @@
 
         </div>
             
-            <form class="job-form">
-
-                <h1 class="job-heading">Enter Job Details</h1>
-                <input type="text" placeholder="Job Name" required>
-                <input type="text" id="jobPostingCategoryNameInput" placeholder="Category Name" required>
-                <input type="text" placeholder="Urgency (e.g. 2-3 days)">
-                <input type="file" placeholder="Upload Job Images">
-                <textarea placeholder="Job Description"></textarea>
-                <textarea placeholder="Additional Requirements"></textarea>
-                <button type="submit">Preview and Submit</button>
-            </form>
+        <form class="job-form" id="jobPostingForm" enctype="multipart/form-data">
+          <h1 class="job-heading">Enter Job Details</h1>
+          <input type="text" name="jobName" placeholder="Job Name" id="jobName" required>
+          <input type="text" name="category" id="jobPostingCategoryNameInput" placeholder="Category Name" required>
+          <input type="text" name="urgency" id="jobUrgency" placeholder="Urgency (e.g. 2-3 days)">
+          <input type="file" name="jobImages" id="jobImages" placeholder="Upload Job Images">
+          <textarea name="description" id="jobDescription" placeholder="Job Description"></textarea>
+          <textarea name="additionalRequirements" id="jobAdditionalRequirement" placeholder="Additional Requirements"></textarea>
+          <button type="submit">Preview and Submit</button>
+      </form>
+      
         
     </section>
 
@@ -238,124 +238,122 @@
 
       <!-- Login And Register Section Starts here -->
 
-  <div class="login-register-section" id="login-register-section">
+      <div class="login-register-section" id="login-register-section">
 
 
-    <div class="common-cont log-reg-cont" id="choose-reg-cont">
-
-      <div class="close-log-reg-button" target="choose-reg-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-
-      <h3 class="log-reg-heading">
-        Register As
-      </h3>
-
-      <button class="choose-user-button" id="seeker-register-btn">Service Seeker</button>
-      <button class="choose-user-button" id="provider-register-btn">Service Provider</button>
-
-      <p>Already have an Account?</p>
-
-      <button id="login-button" class="submit-button">Login</button>
-    </div>
+        <div class="common-cont log-reg-cont" id="choose-reg-cont">
     
-    <div class="login-cont log-reg-cont" id="login-cont" >
-
-      <div class="close-log-reg-button" target="login-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-
-      <h3 class="log-reg-heading">
-        Log in
-      </h3>
-
-      <div class="log-reg-input ">
-        <input type="tel"  id="login-phone" placeholder="Your Phone">
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP">
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-      </div>
-
-      <button id="login-button" class="submit-button">Login</button>
-
-
-      
-
-    </div>
-
-    <div class=" log-reg-cont" id="register-provider-cont">
-
-      <div class="close-log-reg-button" target="register-provider-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-      
-
-      <h3 class="log-reg-heading" style="font-size: 1.2vw;">
-        Register as Service Provider
-      </h3>
-
-      <div class="log-reg-input">
-        <input type="text"  id="register-name" placeholder="Your Name" >
-      </div>
-
-      <div class="log-reg-input">
-        <input type="tel"  id="login-phone" placeholder="Your Phone">
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP" >
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-       
-      </div>
-      <button id="login-button" class="submit-button">Submit</button>
-
-
-      
-
-
-    </div>
-
-    <div class=" log-reg-cont" id="register-seeker-cont">
-
-      <div class="close-log-reg-button" target="register-seeker-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-
-      <h3 class="log-reg-heading" style="font-size: 1.2vw;">
-        Register as Service Seeker
-      </h3>
-
-      <div class="log-reg-input">
-        <input type="text"  id="register-name" placeholder="Your Name" >
-       
-      </div>
-      <div class="log-reg-input">
-        <input type="tel"  id="login-phone" placeholder="Your Phone" >
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP" >
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-       
-      </div>
-
-      <button id="login-button" class="submit-button">Submit</button>
-
-
-
-    </div>
-
-
-
+          <div class="close-log-reg-button" target="choose-reg-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
     
-
-
-  </div>
+          <h3 class="log-reg-heading">
+            Register As
+          </h3>
+    
+          <button class="choose-user-button" id="seeker-register-btn">Service Seeker</button>
+          <button class="choose-user-button" id="provider-register-btn">Service Provider</button>
+    
+          <p>Already have an Account?</p>
+    
+          <button id="login-button" class="submit-button">Login</button>
+        </div>
+        
+        <form class="login-cont log-reg-cont" id="login-cont" >
+    
+          <div class="close-log-reg-button" target="login-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
+    
+          <h3 class="log-reg-heading">
+            Log in
+          </h3>
+    
+          <div class="log-reg-input ">
+            <input type="tel"  id="login-phone" class="log-reg-phone" placeholder="Your Phone">
+            <a  id="verify-phone-button " class="opt-button send-otp-btn">send opt</a>
+          </div>
+          
+          <div class="log-reg-input">
+            <input type="number"  id="login-otp" placeholder="Enter OTP">
+            <a href="" id="resend-otp-button" class="opt-button resend-otp-button">resend opt</a>
+          </div>
+    
+          <input id="login-button" class="submit-button" type="Submit" >
+    
+    
+    
+    
+          
+    
+        </form>
+    
+        <form class=" log-reg-cont" id="register-provider-cont">
+    
+          <div class="close-log-reg-button" target="register-provider-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
+          
+    
+          <h3 class="log-reg-heading" style="font-size: 1.2vw;">
+            Register as Service Provider
+          </h3>
+    
+          <div class="log-reg-input">
+            <input type="text"  id="register-provider-name" placeholder="Your Name" >
+          </div>
+    
+          <div class="log-reg-input">
+            <input type="tel"  id="register-provider-phone" class="log-reg-phone" placeholder="Your Phone">
+            <a href="" id="verify-phone-button" class="opt-button send-otp-btn">send opt</a>
+          </div>
+          
+          <div class="log-reg-input">
+            <input type="number"  id="register-provider-otp" placeholder="Enter OTP" >
+            <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
+           
+          </div>
+          <input id="login-button" class="submit-button" type="Submit">
+    
+        </form>
+    
+        <form class=" log-reg-cont" id="register-seeker-cont">
+    
+          <div class="close-log-reg-button" target="register-seeker-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
+    
+          <h3 class="log-reg-heading" style="font-size: 1.2vw;">
+            Register as Service Seeker
+          </h3>
+    
+          <div class="log-reg-input">
+            <input type="text"  id="register-seeker-name" placeholder="Your Name" >
+           
+          </div>
+          <div class="log-reg-input">
+            <input type="tel"  id="register-seeker-phone" class="log-reg-phone" placeholder="Your Phone" >
+            <a href="" id="verify-phone-button" class="opt-button send-otp-btn">send opt</a>
+          </div>
+          
+          <div class="log-reg-input">
+            <input type="number"  id="register-seeker-otp" placeholder="Enter OTP" >
+            <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
+           
+          </div>
+    
+          <input id="login-button" class="submit-button" type="Submit">
+    
+    
+    
+        </form>
+    
+    
+    
+        
+    
+    
+      </div>
 
   <!-- Login and Register Section ends here -->
 

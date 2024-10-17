@@ -20,17 +20,19 @@ const jobSchema = new mongoose.Schema([{
         
     },
     images :{
-        type : Array,
+        type : String,
         required: false,
     },
     description: { 
         type: String,
-        required: false,
+        required: true,
+        default : "No Description"
        
     },
-    AdditionalInformation: {
+    additionalRequirements: {
         type : String,
-        required: false,
+        required: true,
+        default : "No Additional Requirements"
         
     }, 
     postedBy :{
@@ -43,7 +45,8 @@ const jobSchema = new mongoose.Schema([{
 
         type : String,
         required: true,
-        enum: ['pending', 'active', 'completed', 'cancelled']
+        enum: ['pending', 'active', 'completed', 'cancelled'],
+        default : 'pending',
     },
     provider :{
         type : mongoose.Schema.Types.ObjectId,
