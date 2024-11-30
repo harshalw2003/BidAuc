@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="../static/CSS/style.css">
     <script src="../static/JS/common-script.js"></script>
   <script src="../static/JS/login-register.js"></script>
+  <script src="../static/JS/commonProfile.js"></script>
+  <script src="../static/JS/commonDashboard.js"></script>
+
 
 
     <title>Dashboard | BidAuc</title>
@@ -51,7 +54,7 @@
     <div class="dashboard-container">
         <div class="dashboard-welcome-container">
             <div class="dash-welcome-text">
-              <h2>Welcome back Harshal,</h2>
+              <h2 id="welcome-back"></h2>
             <p>Great to see you again! Let's get started on your next job.</p>
             </div>
 
@@ -99,32 +102,35 @@
 
        
         <div class="dashboard-body-side">
-          <div class="dashboard--profile-content display-container" id="provider-personal-details-cont">
+          <div class="dashboard--profile-content display-container active-container" id="provider-personal-details-cont">
 
 
             <div class="top" style=" margin-bottom: 20px;">
   
               <h2>Profile > Personal Details</h2>
               <div class="user-profile-img">
-                  <img src="../static/Assets/Images/men-profile.jpg" alt="">
-                  <img class="edit-profile-icon" src="../static/Assets/Images/edit-icon.png" alt="">
+                  <img src="../static/Assets/Images/profile-icon.png" alt="">
+                  <div class="edit-profile-icon">
+                    <img src="../static/Assets/Images/edit-icon.png" alt="">
+                    <input type="file" name="profilePicture" id="profile-picture-upload">
+                  </div>
                 </div>
               
             </div>
   
-            <div class="content">
-  
+            <div class="content" id="personal-details-content">
+
               <div class="profile-detail-cont">
                 <label for="">First Name</label>
                 <div>
-                  <p class="profile-detail-text">Harshal</p>
+                  <p id="firstName" class="profile-detail-text"></p>
                   <img src="../static/Assets/Images/name-icon.png" alt="">
                 </div>
               </div>
               <div class="profile-detail-cont">
                 <label for="">Last Name</label>
                 <div>
-                  <p class="profile-detail-text">Warukar</p>
+                  <p id="lastName" class="profile-detail-text"></p>
                   <img src="../static/Assets/Images/name-icon.png" alt="">
                 </div>
               </div>
@@ -132,58 +138,55 @@
   
                 <label for="">Phone</label>
                 <div>
-                  <p class="profile-detail-text">9766629195</p>
+                  <p id="phoneNumber" class="profile-detail-text"></p>
                   <img src="../static/Assets/Images/phone-icon.png" alt="">
                 </div>
               </div>
               <div class="profile-detail-cont">
                 <label for="">Email</label>
                 <div>
-                  <p class="profile-detail-text">harshalwarukar12@gmail.com</p>
+                  <p id="email" class="profile-detail-text"></p>
                   <img src="../static/Assets/Images/email-phone.png" alt="">
                 </div>
               </div>
               <div class="profile-detail-cont">
                 <label for="">Address</label>
                 <div>
-                  <p class="profile-detail-text">Plot no. 53</p>
+                  <p id="address1" class="profile-detail-text"></p>
                   <span>line 1</span>
                 </div>
               </div>
               <div class="profile-detail-cont">
   
                 <div>
-                  <p class="profile-detail-text">Ahilya Nagar, Jaitala road, Nagpur</p>
+                  <p id="address2" class="profile-detail-text"></p>
                   <span>line 2</span>
                 </div>
               </div>
               <div class="profile-detail-cont">
                
                 <div>
-                  <p class="profile-detail-text">Behind Rahi Estate</p>
+                  <p id="landmark" class="profile-detail-text"></p>
                   landmark
                 </div>
               </div>
+            
               <div class="profile-detail-cont">
                 <div>
-                  <p class="profile-detail-text">Maharashtra</p>
-                  <span>state</span>
-                </div>
-              </div>
-              <div class="profile-detail-cont">
-                <div>
-                  <p class="profile-detail-text">Nagpur</p>
+                  <p id="city" class="profile-detail-text"></p>
                  <span>city</span>
                 </div>
               </div>
               <div class="profile-detail-cont">
   
                 <div>
-                  <p class="profile-detail-text">440036</p>
+                  <p id="zip" class="profile-detail-text"></p>
                   <span>zipcode</span>
                 </div>
               </div>
             </div>
+  
+            
   
   
             <hr style="width: 20%; height: 1px; background-color: #468585; margin-top: 50px; margin-left: 30%;">
@@ -339,68 +342,78 @@
 
     <!-- Update Profile Sections Starts here -->
 
-    <div class="update-profile-modal" id="update-profile-modal">
+    <div class="update-profile-modal" id="update-profile-modal"> 
       <div class="modal-header">
           <h2>Update Profile</h2>
           <span class="close-btn" id="update-profile-close-btn">&times;</span>
       </div>
 
-      <form class="update-form">
+      <div class="update-form">
           <!-- Personal Details -->
           <h3>Personal Details ></h3>
-          <div class="personal-details">
+          <form class="personal-details" id="personal-details-form" enctype="multipart/form-data">
               <div class="form-row">
                   <div class="form-group">
                       <label for="firstName">First Name</label>
-                      <input type="text" id="firstName" value="Harshal">
+                      <input type="text" name="firstName" id="firstName" >
                   </div>
                   <div class="form-group">
                       <label for="lastName">Last Name</label>
-                      <input type="text" id="lastName" value="Warukar">
+                      <input type="text" name="lastName" id="lastName" >
                   </div>
               </div>
+              <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Business Name</label>
+                    <input type="text" id="businessName" name="businessName" >
+                </div>
+            </div>
 
               <div class="form-row">
                   <div class="form-group">
                       <label for="phone">Phone</label>
-                      <input type="text" id="phone" value="9766629195">
+                      <input type="text" name="phone" id="phone">
                   </div>
                   <div class="form-group">
                       <label for="email">Email</label>
-                      <input type="email" id="email" value="harshal@gmail.com">
+                      <input type="email" id="email" name="email" >
                   </div>
               </div>
+              
 
               <div class="form-row">
                   <div class="form-group">
                       <label for="address1">Address Line 1</label>
-                      <input type="text" id="address1">
+                      <input type="text" id="address1" name="address1">
                   </div>
                   <div class="form-group">
                       <label for="address2">Address Line 2</label>
-                      <input type="text" id="address2">
+                      <input type="text" id="address2"  name="address2">
                   </div>
               </div>
 
               <div class="form-row">
                   <div class="form-group">
                       <label for="landmark">Landmark</label>
-                      <input type="text" id="landmark">
+                      <input type="text" name="landmark" id="landmark">
                   </div>
                   <div class="form-group">
                       <label for="city">City</label>
-                      <input type="text" id="city" value="Nagpur">
+                      <input type="text" name="city" id="city" >
                   </div>
                   <div class="form-group">
                       <label for="zip">Zip Code</label>
-                      <input type="text" id="zip" value="440036">
+                      <input type="text"  name="zip" id="zip" >
                   </div>
               </div>
-          </div>
+
+              <input type="submit" class="submit-btn" value="Save Personal Details">
+
+          </form> 
 
           <!-- Certifications Section -->
           <h3>Certifications ></h3>
-          <div class="certifications-section">
+          <form class="certifications-section"  id="certification-upload-form">
               <div class="form-row">
                   <div class="form-group">
                       <label for="certName">Certification Name</label>
@@ -430,11 +443,11 @@
                       <!-- <button class="upload-btn">Upload Document</button> -->
                   </div>
               </div>
-          </div>
+          </form>
 
           <!-- Licenses Section -->
           <h3>Licenses ></h3>
-          <div class="licenses-section">
+          <form class="licenses-section" id="license-upload-form">
               <div class="form-row">
                   <div class="form-group">
                       <label for="licenseName">License Name</label>
@@ -464,10 +477,10 @@
                       <!-- <button class="upload-btn">Upload Document</button> -->
                   </div>
               </div>
-          </div>
+          </form>
 
           <button type="submit" class="submit-btn">Submit</button>
-      </form>
+      </div>
   </div>
     <!-- Update Profile Sections Ends here -->
 
@@ -504,124 +517,117 @@
    <!-- Footer Ends Here -->
       <!-- Login And Register Section Starts here -->
 
-  <div class="login-register-section" id="login-register-section">
+      <div class="login-register-section" id="login-register-section">
 
 
-    <div class="common-cont log-reg-cont" id="choose-reg-cont">
-
-      <div class="close-log-reg-button" target="choose-reg-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-
-      <h3 class="log-reg-heading">
-        Register As
-      </h3>
-
-      <button class="choose-user-button" id="seeker-register-btn">Service Seeker</button>
-      <button class="choose-user-button" id="provider-register-btn">Service Provider</button>
-
-      <p>Already have an Account?</p>
-
-      <button id="login-button" class="submit-button">Login</button>
-    </div>
+        <div class="common-cont log-reg-cont" id="choose-reg-cont">
     
-    <div class="login-cont log-reg-cont" id="login-cont" >
-
-      <div class="close-log-reg-button" target="login-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-
-      <h3 class="log-reg-heading">
-        Log in
-      </h3>
-
-      <div class="log-reg-input ">
-        <input type="tel"  id="login-phone" placeholder="Your Phone">
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP">
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-      </div>
-
-      <button id="login-button" class="submit-button">Login</button>
-
-
-      
-
-    </div>
-
-    <div class=" log-reg-cont" id="register-provider-cont">
-
-      <div class="close-log-reg-button" target="register-provider-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-      
-
-      <h3 class="log-reg-heading" style="font-size: 1.2vw;">
-        Register as Service Provider
-      </h3>
-
-      <div class="log-reg-input">
-        <input type="text"  id="register-name" placeholder="Your Name" >
-      </div>
-
-      <div class="log-reg-input">
-        <input type="tel"  id="login-phone" placeholder="Your Phone">
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP" >
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-       
-      </div>
-      <button id="login-button" class="submit-button">Submit</button>
-
-
-      
-
-
-    </div>
-
-    <div class=" log-reg-cont" id="register-seeker-cont">
-
-      <div class="close-log-reg-button" target="register-seeker-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-
-      <h3 class="log-reg-heading" style="font-size: 1.2vw;">
-        Register as Service Seeker
-      </h3>
-
-      <div class="log-reg-input">
-        <input type="text"  id="register-name" placeholder="Your Name" >
-       
-      </div>
-      <div class="log-reg-input">
-        <input type="tel"  id="login-phone" placeholder="Your Phone" >
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP" >
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-       
-      </div>
-
-      <button id="login-button" class="submit-button">Submit</button>
-
-
-
-    </div>
-
-
-
+          <div class="close-log-reg-button" target="choose-reg-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
     
-
-
-  </div>
+          <h3 class="log-reg-heading">
+            Register As
+          </h3>
+    
+          <button class="choose-user-button" id="seeker-register-btn">Service Seeker</button>
+          <button class="choose-user-button" id="provider-register-btn">Service Provider</button>
+    
+          <p>Already have an Account?</p>
+    
+          <button id="login-button" class="submit-button">Login</button>
+        </div>
+        
+        <form class="login-cont log-reg-cont" id="login-cont" >
+    
+          <div class="close-log-reg-button" target="login-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
+    
+          <h3 class="log-reg-heading">
+            Log in
+          </h3>
+    
+          <div class="log-reg-input ">
+            <input type="tel"  id="login-phone" class="log-reg-phone" placeholder="Your Phone">
+            <a  id="verify-phone-button " class="opt-button send-otp-btn">send otp</a>
+          </div>
+          
+          <div class="log-reg-input">
+            <input type="number"  id="login-otp" placeholder="Enter OTP">
+            <a href="" id="resend-otp-button" class="opt-button resend-otp-button">resend otp</a>
+          </div>
+    
+          <input id="login-button" class="submit-button" type="Submit" >
+    
+    
+    
+    
+          
+    
+        </form>
+    
+        <form class=" log-reg-cont" id="register-provider-cont">
+    
+          <div class="close-log-reg-button" target="register-provider-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
+          
+    
+          <h3 class="log-reg-heading" style="font-size: 1.2vw;">
+            Register as Service Provider
+          </h3>
+    
+          <div class="log-reg-input">
+            <input type="text"  id="register-provider-name" placeholder="Your Name" >
+          </div>
+    
+          <div class="log-reg-input">
+            <input type="tel"  id="register-provider-phone" class="log-reg-phone" placeholder="Your Phone">
+            <a href="" id="verify-phone-button" class="opt-button send-otp-btn">send otp</a>
+          </div>
+          
+          <div class="log-reg-input">
+            <input type="number"  id="register-provider-otp" placeholder="Enter OTP" >
+            <a href="" id="resend-otp-button" class="opt-button">resend otp</a>
+           
+          </div>
+          <input id="login-button" class="submit-button" type="Submit">
+    
+        </form>
+    
+        <form class=" log-reg-cont" id="register-seeker-cont">
+    
+          <div class="close-log-reg-button" target="register-seeker-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
+    
+          <h3 class="log-reg-heading" style="font-size: 1.2vw;">
+            Register as Service Seeker
+          </h3>
+    
+          <div class="log-reg-input">
+            <input type="text"  id="register-seeker-name" placeholder="Your Name" >
+           
+          </div>
+          <div class="log-reg-input">
+            <input type="tel"  id="register-seeker-phone" class="log-reg-phone" placeholder="Your Phone" >
+            <a href="" id="verify-phone-button" class="opt-button send-otp-btn">send otp</a>
+          </div>
+          
+          <div class="log-reg-input">
+            <input type="number"  id="register-seeker-otp" placeholder="Enter OTP" >
+            <a href="" id="resend-otp-button" class="opt-button">resend otp</a>
+           
+          </div>
+    
+          <input id="login-button" class="submit-button" type="Submit">
+    
+    
+    
+        </form>
+    
+      </div>
 
   <!-- Login and Register Section ends here -->
 </body>

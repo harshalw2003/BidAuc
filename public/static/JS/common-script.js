@@ -1,4 +1,5 @@
 const contentLoad = () => {
+  
   const profileButton = document.getElementById("profile-button");
   
 
@@ -55,12 +56,15 @@ const contentLoad = () => {
 
   for (i = 0; i < log_reg_close_btn.length; i++) {
     log_reg_close_btn[i].addEventListener("click", (event) => {
+
       login_reg_cont.style.display = "none";
       registerSeekerCont.style.display = "none";
       registerProviderCont.style.display = "none";
       commonCont.style.display = "flex";
       loginCont.style.display = "none";
+      
     });
+
   }
 
   const commonCont = document.getElementById("choose-reg-cont");
@@ -134,6 +138,7 @@ const contentLoad = () => {
  
   
   const jobDropdownDown = document.querySelectorAll(".job-dropdown-down");
+  console.log(jobDropdownDown)
  
   
   const jobDropdownUp = document.querySelectorAll(".job-dropdown-up");
@@ -144,15 +149,17 @@ const contentLoad = () => {
     jobDropdownDown[i].addEventListener("click", (event) => {
       event.preventDefault();
       console.log("Dropdown Down Clicked");
+      console.log(event.currentTarget)
   
       //Expand the job detail card
+      console.log(event.currentTarget.parentNode.parentNode)
       const extend_container = event.currentTarget.parentNode.parentNode.parentNode
       extend_container.style.maxHeight = extend_container.scrollHeight + "px"; // Expands to the content's height
       extend_container.style.backgroundColor = "transparent";
       event.currentTarget.style.display = "none";
       jobDropdownUp[i].style.display = "block";
 
-      console.log(extend_container)
+      
       // extend_container.style.backgroundColor="Transparent";
       // extend_container.style.maxHeight=extend_container.scrollHeight + "px";
 
@@ -164,12 +171,13 @@ const contentLoad = () => {
     jobDropdownUp[i].addEventListener("click", (event) => {
       event.preventDefault();
       // Collapse the job detail card
-      const extend_container = event.currentTarget.parentNode.parentNode.parentNode
+      const extend_container = event.currentTarget.parentNode.parentNode.parentNode;
       extend_container.style.maxHeight = "8vh"; // Collapses back to 8vh
       extend_container.style.backgroundColor = "rgb(84, 166, 166, 0.6)";
       event.currentTarget.style.display = "none";
       jobDropdownDown[i].style.display = "block";
     });
+
   }
 
 
@@ -184,7 +192,7 @@ const contentLoad = () => {
       event.preventDefault();
       console.log("Tab Clicked");
       const display_container = event.currentTarget.getAttribute("target")
-      console.log(display_container)
+      
       //remove active class from all other tabs
       job_link_tabs.forEach( (tab) => {
         tab.classList.remove("active")
@@ -194,6 +202,7 @@ const contentLoad = () => {
       const containers = document.querySelectorAll(".display-container")
       containers.forEach( (container) => {
        container.style.display = "none"
+       container.classList.remove("active-container")
       })
 
       //display target container
@@ -235,11 +244,46 @@ const updateProfileBtn = document.querySelector("#update-profile-button")
     
   });
 
+  
+
 
 }
+
+
+const isLoggedIn = () =>{
+
+  fetch('http://localhost:5000/user/isLoggedIn', {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+     
+   
+
+})
+.then(response => response.text())
+.then(data => {
+    result=JSON.parse(data)
+    if(result.success){
+
+      document.querySelector("#dash-login-menu a#logout-btn").style.display = 'flex';
+      document.querySelector("#dash-login-menu a#login-popup-open").style.display = 'none';
+    
+      // Show the profile button and hide the login button  
   
+    }else{
+  
+      document.querySelector("#dash-login-menu a#login-popup-open").style.display = 'flex';
+      document.querySelector("#dash-login-menu a#logout-btn").style.display = 'none';
+
+    }
+    
+})
+.catch((error) => {
+    console.log(error);
+});
+}
   
 
-
-
+// document.addEventListener("DOMContentLoaded", isLoggedIn);
 document.addEventListener("DOMContentLoaded", contentLoad);

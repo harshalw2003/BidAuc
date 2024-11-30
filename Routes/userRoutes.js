@@ -10,14 +10,14 @@ router.post("/generateOtp", userController.generateOtp)
 router.post('/register',userController.registerUser)
 router.post('/login',userController.loginUser)
 router.post('/logout',authMiddleware.authenticateToken,userController.logoutUser)
-router.post('/updateDetails', authMiddleware.authenticateToken, userController.updateDetails);
-// router.post('/upload-profile',authMiddleware.authenticateToken,userController.upload.single('profilePicture'), userController.uploadProfile)
-// // router.post('/update',userController.login)
-// router.post('/updateDetail',authMiddleware.authenticateToken,userController.updateDetails)
-// router.post('/logout',authMiddleware.authenticateToken,userController.logoutUser)
-// // router.post('/upload-profile',authMiddleware.authenticateToken, userController.upload.single('profilePicture'),userController.uploadProfile)
-// router.get('/admin',authMiddleware.authenticateToken,userController.userAdmin)
-// router.get('/adminDashboard',authMiddleware.authenticateToken,userController.adminDashboard)
+router.get('/isLoggedIn',authMiddleware.authenticateToken)
+router.post('/updatePersonalDetails', authMiddleware.authenticateToken, userController.updatePersonalDetails);
+router.get('/getAllProviders', userController.getAllProviders);
+router.post('/uploadProfilePicture',authMiddleware.authenticateToken, userController.upload.single('profilePicture'),userController.uploadProfilePicture),
+router.get('/loadProfile', authMiddleware.authenticateToken, userController.getUserDetails),
+router.get('/isProvider', authMiddleware.authenticateToken, userController.checkUserIsProvider)
+router.get('/isSeeker', authMiddleware.authenticateToken, userController.checkUserIsSeeker)
+// router.get('/getAllCategories', authMiddleware.authenticateToken, categoryController.getAllCategories  
 
 
 module.exports = router;

@@ -106,19 +106,18 @@ loginForm.addEventListener("submit", async (e)=>{
 providerRegisterForm.addEventListener("submit",  (e)=>{
 
     e.preventDefault()
-    const providerName = document.getElementById("register-provider-name").value;
+   
     const providerPhone = document.getElementById("register-provider-phone").value;
     const providerOtp = document.getElementById("register-provider-otp").value
 
 
     const registerUserData = {
-        userName: providerName,
         phoneNumber: providerPhone,
         otp: providerOtp,
-        role : "provider"
+        role : "Provider"
     }
 
-    console.log(providerName, providerPhone, providerOtp, "Provider" )
+   
 
 
     fetch('http://localhost:5000/user/register', {
@@ -144,19 +143,19 @@ providerRegisterForm.addEventListener("submit",  (e)=>{
 seekerRegisterForm.addEventListener("submit",  (e)=>{ 
 
     e.preventDefault()
-    const seekerName = document.getElementById("register-seeker-name").value;
+   
     const seekerPhone = document.getElementById("register-seeker-phone").value;
     const seekerOtp = document.getElementById("register-seeker-otp").value
 
 
     const registerUserData = {
-        userName: seekerName,
+        
         phoneNumber: seekerPhone,
         otp: seekerOtp,
         role : "Seeker"
     }
 
-    console.log(seekerName, seekerPhone, seekerOtp, "Seeker" )
+    
 
 
     fetch('http://localhost:5000/user/register', {

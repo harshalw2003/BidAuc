@@ -1,0 +1,183 @@
+[
+    {
+      "profileStatus": "updated",
+      "userName": { "firstName": "John", "lastName": "Doe" },
+      "phoneNumber": 9876543210,
+      "email": "john.doe@example.com",
+      "address": {
+        "line1": "123 Main Street",
+        "line2": "Apt 4B",
+        "landmark": "Near City Park",
+        "city": "Nagpur",
+        "zipCode": "440001"
+      },
+      "businessName": "John's Services",
+      "role": "Provider",
+      "profilePicture": "public/static/Assets/Images/provider-icon.png",
+      "token": "token1",
+      "Subscription_isActive": true
+    },
+    {
+      "profileStatus": "default",
+      "userName": { "firstName": "Jane", "lastName": "Smith" },
+      "phoneNumber": 9876501234,
+      "email": "jane.smith@example.com",
+      "address": {
+        "line1": "456 Elm Street",
+        "line2": "",
+        "landmark": "Opposite Mall",
+        "city": "Pune",
+        "zipCode": "411001"
+      },
+      "businessName": "Jane's Enterprise",
+      "role": "Provider",
+      "profilePicture": "public/static/Assets/Images/provider-icon.png",
+      "token": "",
+      "Subscription_isActive": false
+    },
+    {
+      "profileStatus": "updated",
+      "userName": { "firstName": "Alice", "lastName": "Johnson" },
+      "phoneNumber": 9876540987,
+      "email": "alice.johnson@example.com",
+      "address": {
+        "line1": "789 Oak Avenue",
+        "line2": "",
+        "landmark": "Next to Library",
+        "city": "Mumbai",
+        "zipCode": "400001"
+      },
+      "businessName": "Alice Tech",
+      "role": "Provider",
+      "profilePicture": "public/static/Assets/Images/provider-icon.png",
+      "token": "token2",
+      "Subscription_isActive": true
+    },
+    {
+      "profileStatus": "default",
+      "userName": { "firstName": "Bob", "lastName": "Brown" },
+      "phoneNumber": 9876567890,
+      "email": "bob.brown@example.com",
+      "address": {
+        "line1": "101 Pine Road",
+        "line2": "",
+        "landmark": "Near Metro Station",
+        "city": "Delhi",
+        "zipCode": "110001"
+      },
+      "businessName": "Bob's Repair",
+      "role": "Provider",
+      "profilePicture": "public/static/Assets/Images/provider-icon.png",
+      "token": "",
+      "Subscription_isActive": false
+    },
+    {
+      "profileStatus": "updated",
+      "userName": { "firstName": "Charlie", "lastName": "Davis" },
+      "phoneNumber": 9876523456,
+      "email": "charlie.davis@example.com",
+      "address": {
+        "line1": "303 Birch Lane",
+        "line2": "",
+        "landmark": "Near Shopping Plaza",
+        "city": "Bangalore",
+        "zipCode": "560001"
+      },
+      "businessName": "Davis Solutions",
+      "role": "Provider",
+      "profilePicture": "public/static/Assets/Images/provider-icon.png",
+      "token": "token3",
+      "Subscription_isActive": true
+    },
+    {
+      "profileStatus": "default",
+      "userName": { "firstName": "Emily", "lastName": "Evans" },
+      "phoneNumber": 9876587654,
+      "email": "emily.evans@example.com",
+      "address": {
+        "line1": "505 Maple Drive",
+        "line2": "Suite 10",
+        "landmark": "Near Bus Stop",
+        "city": "Chennai",
+        "zipCode": "600001"
+      },
+      "businessName": "Evans Catering",
+      "role": "Provider",
+      "profilePicture": "public/static/Assets/Images/provider-icon.png",
+      "token": "",
+      "Subscription_isActive": false
+    },
+    {
+      "profileStatus": "updated",
+      "userName": { "firstName": "Frank", "lastName": "Green" },
+      "phoneNumber": 9876512345,
+      "email": "frank.green@example.com",
+      "address": {
+        "line1": "707 Willow Way",
+        "line2": "",
+        "landmark": "Behind High School",
+        "city": "Hyderabad",
+        "zipCode": "500001"
+      },
+      "businessName": "Green Landscaping",
+      "role": "Provider",
+      "profilePicture": "public/static/Assets/Images/provider-icon.png",
+      "token": "token4",
+      "Subscription_isActive": true
+    },
+    {
+      "profileStatus": "default",
+      "userName": { "firstName": "Grace", "lastName": "Hall" },
+      "phoneNumber": 9876561234,
+      "email": "grace.hall@example.com",
+      "address": {
+        "line1": "909 Cedar Street",
+        "line2": "",
+        "landmark": "Next to Cinema",
+        "city": "Kolkata",
+        "zipCode": "700001"
+      },
+      "businessName": "Hall's Consulting",
+      "role": "Provider",
+      "profilePicture": "public/static/Assets/Images/provider-icon.png",
+      "token": "",
+      "Subscription_isActive": false
+    },
+    {
+      "profileStatus": "updated",
+      "userName": { "firstName": "Hank", "lastName": "King" },
+      "phoneNumber": 9876598765,
+      "email": "hank.king@example.com",
+      "address": {
+        "line1": "202 Spruce Avenue",
+        "line2": "",
+        "landmark": "Near Tech Hub",
+        "city": "Ahmedabad",
+        "zipCode": "380001"
+      },
+      "businessName": "King Enterprises",
+      "role": "Provider",
+      "profilePicture": "public/static/Assets/Images/provider-icon.png",
+      "token": "token5",
+      "Subscription_isActive": true
+    },
+    {
+      "profileStatus": "default",
+      "userName": { "firstName": "Ivy", "lastName": "Lewis" },
+      "phoneNumber": 9876545432,
+      "email": "ivy.lewis@example.com",
+      "address": {
+        "line1": "606 Cypress Road",
+        "line2": "",
+        "landmark": "Close to Railway Station",
+        "city": "Jaipur",
+        "zipCode": "302001"
+      },
+      "businessName": "Lewis Ventures",
+      "role": "Provider",
+      "profilePicture": "public/static/Assets/Images/provider-icon.png",
+      "token": "",
+      "Subscription_isActive": false
+    }
+  ]
+  

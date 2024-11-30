@@ -7,6 +7,16 @@ const authMiddleware = require('../Middlewares/auth.js');
 
 
 router.post('/create', authMiddleware.authenticateToken,jobController.upload.single('jobImages'),jobController.createJob)
-router.get('/getAllJobs',jobController.getAllJobs)
+router.get('/getAllJobs',jobController.getAllPendingJobs)
+router.get('/getSeekerAllJobs', authMiddleware.authenticateToken,jobController.getOneSeekerAllJobs)
+router.get('/getSeekerCompletedJobs', authMiddleware.authenticateToken,jobController.getOneSeekerCompletedJobs)
+router.get('/getSeekerPendingJobs', authMiddleware.authenticateToken,jobController.getOneSeekerPendingJobs)
+router.get('/getSeekerCanceledJobs', authMiddleware.authenticateToken,jobController.getOneSeekerCanceledJobs)
+router.post('/cancelSeekerJob', authMiddleware.authenticateToken,jobController.canceledJob)
+router.post('/markAsCompleted', authMiddleware.authenticateToken,jobController.markAsCompleted)
+router.get('/getProviderActiveJobs', authMiddleware.authenticateToken, jobController.getProviderActiveJobs)
+router.get('/getProviderCompletedJobs', authMiddleware.authenticateToken, jobController.getProviderCompletedJobs)
+router.get('/getProviderBidPostedJobs', authMiddleware.authenticateToken, jobController.getProviderBidPostedJobs)
+
 // jobController.upload.single('jobImages'),
 module.exports = router;

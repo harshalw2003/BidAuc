@@ -6,10 +6,27 @@ const jwt = require("jsonwebtoken")
 const multer = require('multer');
 const QRCode = require('qrcode');
 const path = require('path');
+const fs = require('fs');
 const dotenv = require('dotenv');
+const { json } = require('express');
+const twilio = require("twilio");
+const otpClient = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_ACCOUNT_TOKEN);
 
 
 dotenv.config()
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, './public/static/Assets/uploads/profile-pictures'); // Store in this directory
+  },
+  filename: (req, file, cb) => {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, `${uniqueSuffix}${path.extname(file.originalname)}`);
+  }
+});
+
+const upload = multer({ storage: storage });
+
 
 
 
@@ -21,23 +38,50 @@ const generateOtp = async(req, res) =>{
   try{  
 
   const otpNumber = Math.floor(100000 + Math.random() * 900000).toString();
+  const ifOtpExist = await Otp.findOne({phoneNumber:req.body.phoneNumber})
+  if(ifOtpExist){
+
+    await Otp.deleteOne({phoneNumber:req.body.phoneNumber})
+
+  }
   const user = { phoneNumber:req.body.phoneNumber , otp:otpNumber};
+
   const newOtp = new Otp(user)
-  await newOtp.save();
   console.log(newOtp)
+  
+//Method to send the otp to phone number
+const sendSMS = async (body) =>{
+
+    let msgOptions = {
+
+        from: process.env.SEND_OTP_FROM_NUMBER,
+        to:"+91"+req.body.phoneNumber ,
+        body
+    }
+    try{
+        const message = await otpClient.messages.create(msgOptions)  
+        // console.log(message);
+    }catch(e){
+        console.error(e);
+    }
+}
+
+// sendSMS(`Your OTP is: ${otpNumber}`);
+
+await newOtp.save();
  
 
   res.json({
 
-     message: "OTP generated successfully",
-     success : true,
-     otp : otpNumber
+     message: "OTP Sent successfully",
+     success : true
+     
   
  });
 }catch(err){
 
   res.json({
-     message: "Error Generating OTP",
+     message: "Error Sending OTP",
      success : false,
      error : err.message
   
@@ -71,7 +115,7 @@ const registerUser = async (req, res) => {
       
       const userDetails = {
 
-        userName: req.body.userName,
+        
         phoneNumber: req.body.phoneNumber,
         role : req.body.role
       
@@ -188,15 +232,16 @@ const loginUser = async (req, res) => {
 
 
 
-const updateDetails = async (req, res) => {
+const updatePersonalDetails = async (req, res) => {
 
   console.log("User update details API hit")
   try {
-  console.log(JSON.stringify(req.body))
+  console.log(req.body)
   const user = req.user
   console.log(user)
-  // await userModel.findByIdAndUpdate(user._id, updatedDetails)
-  // update.save()
+  const updatedDetails = req.body
+   await userModel.findByIdAndUpdate(user._id, updatedDetails)
+  // await userUpdated.save()
   res.json({
     success: true,
     message: "User details updated successfully",
@@ -213,26 +258,59 @@ const updateDetails = async (req, res) => {
 }
 
 
-const uploadProfile = async (req, res) => {
+const uploadProfilePicture= async (req, res) => {
+  try {
+    const userId = req.user._id; // Assuming userId is available from authentication middleware
+    const newProfilePicPath = req.file.path;
 
-  try { 
-    // console.log(req)
-    const user = await userModel.findById(req.user._id);
-    user.profilePicture = req.file.path;
-    // await user.findByIdAndUpdate(user._id,{profilePicture : req.file.path})
+    // Find the user
+    const user = await userModel.findById(userId);
+    if (!user) {
+      return res.status(404).json({ success: false, message: 'User not found' });
+    }
+
+    // Delete old profile picture if it exists
+    if (user.profilePicture) {
+      const oldProfilePicPath = user.profilePicture;
+      fs.unlink(oldProfilePicPath, (err) => {
+        if (err) {
+          console.log(`Error deleting old profile picture: ${err.message}`);
+        }
+      });
+    }
+
+    // Update user profile picture
+    user.profilePicture = newProfilePicPath;
     await user.save();
-    res.json({
-      sucess : true,
-      message : 'File uploaded successfully'});
-  } catch (error) {
-    res.status(400).json(
-      {
-        success : false,
-        message : 'Error uploading file'}
-    );
-  }
 
+    res.json({
+      success: true,
+      message: 'Profile picture updated successfully',
+      profilePic: newProfilePicPath
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
 }
+
+const getUserDetails = async (req, res) => {
+
+  try{
+
+  const userDetails = await userModel.findById(req.user._id)
+  res.json({success: true,
+    message: 'User details retreived successfully',
+    userDetails: userDetails});
+  }catch(err){
+
+    res.json({success: false,
+       message: "Error while retrieving user details",
+       error: err.message})
+
+  
+  }
+  
+};
 
 
 const logoutUser = async (req, res) => {
@@ -254,6 +332,67 @@ const logoutUser = async (req, res) => {
   }
 }
 
+const getAllProviders = async (req, res) => {
+  
+  
+  console.log("Get All Providers API hit")
+  try{
+
+    const allProviders = await userModel.find({role: "Provider"});
+    res.json({
+      success: true,
+      message: "All Providers fetched successfully",
+      providers: allProviders
+    })
+  }catch(err) {
+
+    res.json({
+      success: false,
+      message: err.message,
+      
+    })
+  }
+
+
+
+}
+
+
+const checkUserIsProvider = async (req, res) => {
+
+  const user = req.user
+
+  if(user.role == 'Provider'){
+
+    res.json({
+      success: true,
+      message: "User Logged in as Provider"
+    })
+  }else{
+
+    res.json({success: false, message: "User Logged in as Seeker"});
+  }
+}
+
+
+const checkUserIsSeeker = async (req, res) => {
+
+  const user = req.user
+
+  if(user.role == 'Seeker'){
+
+    res.json({
+      success: true,
+      message: "User Logged in as Seeker"
+    })
+  }else{
+
+    res.json({success: false, message: "User Logged in as Provider"});
+  }
+}
+
+
+
 
 
 
@@ -264,8 +403,13 @@ module.exports = {
   generateOtp,
   registerUser,
   loginUser,
-  uploadProfile,
+  uploadProfilePicture,
+  getUserDetails,
   logoutUser,
-  updateDetails,
+  updatePersonalDetails,
+  getAllProviders,
+  upload,
+  checkUserIsProvider,
+  checkUserIsSeeker,
 
 }

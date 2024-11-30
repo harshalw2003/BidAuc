@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../static/CSS/style.css">
     <script src="../static/JS/common-script.js"></script>
   <script src="../static/JS/login-register.js"></script>
+  <script src="../static/JS/providersLoad.js"></script>
 
     <title>Browse Providers | BidAuc</title>
 </head>
@@ -44,29 +45,31 @@
           <img src="../static/Assets/Images/user-icon.png" alt="Profile Icon">
         </div>
       </div>
+
     </header>
       <!-- Header Section ends here -->
 
     <!-- Browse Providers Section -->
-    <section class="browse-providers container">
+    <section class="browse-providers container" >
         <div class="search-container">
         <h1>Browse Providers</h1>
 
             <div class="search-bar">
                 <input type="text" placeholder="Search Providers">
-                <img src="../../Assets/Images/search-icon.png" alt="">
+                <img src="../static/Assets/Images/search-icon.png" alt="">
                 
             </div>
             <div class="sort-options">
                 <span>Sort by</span>
-                <img src="../../Assets/Images/sort-icon.png" alt="Sort">
+                <img src="../static/Assets/Images/sort-icon.png" alt="Sort">
             </div>
             
         </div>
 
         <!-- Providers Grid -->
-        <div class="providers-grid">
-          <div class="browse-provider-card">
+        <div class="providers-grid"  id="providers-grid">
+        
+          <!-- <div class="browse-provider-card">
             <img class="provider-img" src="../static/Assets/Images/electrical-work-profile.jpg" alt="Provider 1">
   
             <h3 class="provider-name">Harshal Electrical works</h3>
@@ -80,83 +83,8 @@
                 <span class="service-rating-p">service rating</span>
               </div>
             </div>
-          </div>
-          <div class="browse-provider-card">
-            <img class="provider-img" src="../static/Assets/Images/electrical-work-profile.jpg" alt="Provider 1">
-  
-            <h3 class="provider-name">Harshal Electrical works</h3>
-  
-  
-            <div class="providers-left-bottom">
-              <a href="../Templates/specific-provider-profile.html" class="view-profile-btn">View Profile</a>
-              <div class="rating">
-                <img src="../static/Assets/Images/star-icon.png" alt="">
-                <p>4.5</p>
-                <span class="service-rating-p">service rating</span>
-              </div>
-            </div>
-          </div>
-          <div class="browse-provider-card">
-            <img class="provider-img" src="../static/Assets/Images/electrical-work-profile.jpg" alt="Provider 1">
-  
-            <h3 class="provider-name">Harshal Electrical works</h3>
-  
-  
-            <div class="providers-left-bottom">
-              <a href="../Templates/specific-provider-profile.html" class="view-profile-btn">View Profile</a>
-              <div class="rating">
-                <img src="../static/Assets/Images/star-icon.png" alt="">
-                <p>4.5</p>
-                <span class="service-rating-p">service rating</span>
-              </div>
-            </div>
-          </div>
-          <div class="browse-provider-card">
-            <img class="provider-img" src="../static/Assets/Images/electrical-work-profile.jpg" alt="Provider 1">
-  
-            <h3 class="provider-name">Harshal Electrical works</h3>
-  
-  
-            <div class="providers-left-bottom">
-              <a href="../Templates/specific-provider-profile.html" class="view-profile-btn">View Profile</a>
-              <div class="rating">
-                <img src="../static/Assets/Images/star-icon.png" alt="">
-                <p>4.5</p>
-                <span class="service-rating-p">service rating</span>
-              </div>
-            </div>
-          </div>
-          <div class="browse-provider-card">
-            <img class="provider-img" src="../static/Assets/Images/electrical-work-profile.jpg" alt="Provider 1">
-  
-            <h3 class="provider-name">Harshal Electrical works</h3>
-  
-  
-            <div class="providers-left-bottom">
-              <a href="../Templates/specific-provider-profile.html" class="view-profile-btn">View Profile</a>
-              <div class="rating">
-                <img src="../static/Assets/Images/star-icon.png" alt="">
-                <p>4.5</p>
-                <span class="service-rating-p">service rating</span>
-              </div>
-            </div>
-          </div>
-          <div class="browse-provider-card">
-            <img class="provider-img" src="../static/Assets/Images/electrical-work-profile.jpg" alt="Provider 1">
-  
-            <h3 class="provider-name">Harshal Electrical works</h3>
-  
-  
-            <div class="providers-left-bottom">
-              <a href="../Templates/specific-provider-profile.html" class="view-profile-btn">View Profile</a>
-              <div class="rating">
-                <img src="../static/Assets/Images/star-icon.png" alt="">
-                <p>4.5</p>
-                <span class="service-rating-p">service rating</span>
-              </div>
-            </div>
-          </div>
-         
+          </div> -->
+          
           
           
             <!-- More provider cards -->
@@ -173,36 +101,36 @@
     <!-- Featured Categories Section -->
     <section class="featured-categories">
 
-        <div class="featured-categories-top">
-          <h2 class="heading1">Related Categories</h2>
-          <a class="explore-more-button button1" href="../Templates/browse-categories.html">Explore more categories</a>
+      <div class="featured-categories-top">
+        <h2 class="heading1">Related Categories</h2>
+        <a class="explore-more-button button1" href="../Templates/browse-categories.html">Explore more categories</a>
+      </div>
+  
+      <div class="categories">
+        <div class="category-item">
+          <img src="../static/Assets/Images/Electrician.jpg" alt="Electrical Works">
+          <p>Electrical Works</p>
         </div>
-    
-        <div class="categories">
-          <div class="category-item">
-            <img src="../../Assets/Images/Electrician.jpg" alt="Electrical Works">
-            <p>Electrical Works</p>
-          </div>
-          <div class="category-item">
-            <img src="../../Assets/Images/plumbing.webp" alt="Electrical Works" alt="Plumbing">
-            <p>Plumbing</p>
-          </div>
-          <div class="category-item">
-            <img src="../../Assets/Images/sofa-cleaning.jpeg" alt="Electrical Works" alt="Sofa Cleaning">
-            <p>Sofa Cleaning</p>
-          </div>
-          <div class="category-item">
-            <img src="../../Assets/Images/Electrician.jpg" alt="Electrical Works" alt="Electronics">
-            <p>Electronics</p>
-          </div>
-          <div class="category-item">
-            <img src="../../Assets/Images/printing-works-profile.jpeg" alt="Electrical Works" alt="Electronics">
-            <p>Printing</p>
-          </div>
+        <div class="category-item">
+          <img src="../static/Assets/Images/plumbing.webp" alt="Electrical Works" alt="Plumbing">
+          <p>Plumbing</p>
         </div>
-    
-    
-      </section>
+        <div class="category-item">
+          <img src="../static/Assets/Images/sofa-cleaning.jpeg" alt="Electrical Works" alt="Sofa Cleaning">
+          <p>Sofa Cleaning</p>
+        </div>
+        <div class="category-item">
+          <img src="../static/Assets/Images/Electrician.jpg" alt="Electrical Works" alt="Electronics">
+          <p>Electronics</p>
+        </div>
+        
+        
+      
+        
+      </div>
+  
+  
+    </section>
 
 
       
@@ -241,117 +169,117 @@
 
       <!-- Login And Register Section Starts here -->
 
-  <div class="login-register-section" id="login-register-section">
+      <div class="login-register-section" id="login-register-section">
 
 
-    <div class="common-cont log-reg-cont" id="choose-reg-cont">
-
-      <div class="close-log-reg-button" target="choose-reg-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-
-      <h3 class="log-reg-heading">
-        Register As
-      </h3>
-
-      <button class="choose-user-button" id="seeker-register-btn">Service Seeker</button>
-      <button class="choose-user-button" id="provider-register-btn">Service Provider</button>
-
-      <p>Already have an Account?</p>
-
-      <button id="login-button" class="submit-button">Login</button>
-    </div>
+        <div class="common-cont log-reg-cont" id="choose-reg-cont">
     
-    <div class="login-cont log-reg-cont" id="login-cont" >
-
-      <div class="close-log-reg-button" target="login-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
+          <div class="close-log-reg-button" target="choose-reg-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
+    
+          <h3 class="log-reg-heading">
+            Register As
+          </h3>
+    
+          <button class="choose-user-button" id="seeker-register-btn">Service Seeker</button>
+          <button class="choose-user-button" id="provider-register-btn">Service Provider</button>
+    
+          <p>Already have an Account?</p>
+    
+          <button id="login-button" class="submit-button">Login</button>
+        </div>
+        
+        <form class="login-cont log-reg-cont" id="login-cont" >
+    
+          <div class="close-log-reg-button" target="login-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
+    
+          <h3 class="log-reg-heading">
+            Log in
+          </h3>
+    
+          <div class="log-reg-input ">
+            <input type="tel"  id="login-phone" class="log-reg-phone" placeholder="Your Phone">
+            <a  id="verify-phone-button " class="opt-button send-otp-btn">send otp</a>
+          </div>
+          
+          <div class="log-reg-input">
+            <input type="number"  id="login-otp" placeholder="Enter OTP">
+            <a href="" id="resend-otp-button" class="opt-button resend-otp-button">resend otp</a>
+          </div>
+    
+          <input id="login-button" class="submit-button" type="Submit" >
+    
+    
+    
+    
+          
+    
+        </form>
+    
+        <form class=" log-reg-cont" id="register-provider-cont">
+    
+          <div class="close-log-reg-button" target="register-provider-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
+          
+    
+          <h3 class="log-reg-heading" style="font-size: 1.2vw;">
+            Register as Service Provider
+          </h3>
+    
+          <div class="log-reg-input">
+            <input type="text"  id="register-provider-name" placeholder="Your Name" >
+          </div>
+    
+          <div class="log-reg-input">
+            <input type="tel"  id="register-provider-phone" class="log-reg-phone" placeholder="Your Phone">
+            <a href="" id="verify-phone-button" class="opt-button send-otp-btn">send otp</a>
+          </div>
+          
+          <div class="log-reg-input">
+            <input type="number"  id="register-provider-otp" placeholder="Enter OTP" >
+            <a href="" id="resend-otp-button" class="opt-button">resend otp</a>
+           
+          </div>
+          <input id="login-button" class="submit-button" type="Submit">
+    
+        </form>
+    
+        <form class=" log-reg-cont" id="register-seeker-cont">
+    
+          <div class="close-log-reg-button" target="register-seeker-cont">
+            <img src="../static/Assets/Images/close-icon.png" alt="">
+          </div>
+    
+          <h3 class="log-reg-heading" style="font-size: 1.2vw;">
+            Register as Service Seeker
+          </h3>
+    
+          <div class="log-reg-input">
+            <input type="text"  id="register-seeker-name" placeholder="Your Name" >
+           
+          </div>
+          <div class="log-reg-input">
+            <input type="tel"  id="register-seeker-phone" class="log-reg-phone" placeholder="Your Phone" >
+            <a href="" id="verify-phone-button" class="opt-button send-otp-btn">send otp</a>
+          </div>
+          
+          <div class="log-reg-input">
+            <input type="number"  id="register-seeker-otp" placeholder="Enter OTP" >
+            <a href="" id="resend-otp-button" class="opt-button">resend otp</a>
+           
+          </div>
+    
+          <input id="login-button" class="submit-button" type="Submit">
+    
+    
+    
+        </form>
+    
       </div>
-
-      <h3 class="log-reg-heading">
-        Log in
-      </h3>
-
-      <div class="log-reg-input ">
-        <input type="tel"  id="login-phone" placeholder="Your Phone">
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP">
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-      </div>
-
-      <button id="login-button" class="submit-button">Login</button>
-
-
-      
-
-    </div>
-
-    <div class=" log-reg-cont" id="register-provider-cont">
-
-      <div class="close-log-reg-button" target="register-provider-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-      
-
-      <h3 class="log-reg-heading" style="font-size: 1.2vw;">
-        Register as Service Provider
-      </h3>
-
-      <div class="log-reg-input">
-        <input type="text"  id="register-name" placeholder="Your Name" >
-      </div>
-
-      <div class="log-reg-input">
-        <input type="tel"  id="login-phone" placeholder="Your Phone">
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP" >
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-       
-      </div>
-      <button id="login-button" class="submit-button">Submit</button>
-
-
-      
-
-
-    </div>
-
-    <div class=" log-reg-cont" id="register-seeker-cont">
-
-      <div class="close-log-reg-button" target="register-seeker-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-
-      <h3 class="log-reg-heading" style="font-size: 1.2vw;">
-        Register as Service Seeker
-      </h3>
-
-      <div class="log-reg-input">
-        <input type="text"  id="register-name" placeholder="Your Name" >
-       
-      </div>
-      <div class="log-reg-input">
-        <input type="tel"  id="login-phone" placeholder="Your Phone" >
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP" >
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-       
-      </div>
-
-      <button id="login-button" class="submit-button">Submit</button>
-
-    </div>
-
-  </div>
 
   <!-- Login and Register Section ends here -->
 

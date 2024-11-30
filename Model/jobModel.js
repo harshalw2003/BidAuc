@@ -41,17 +41,35 @@ const jobSchema = new mongoose.Schema([{
         ref : 'user',
         required: true,
     },
-    status :{
+    completionStatus :{
 
         type : String,
-        required: true,
-        enum: ['pending', 'active', 'completed', 'cancelled'],
+        required: false,
         default : 'pending',
+    },
+    bidStatus :{
+
+        type : String,
+        required: false,
+        // enum: ['accepted', 'unaccepted'],
+        default : 'unaccepted',
     },
     provider :{
         type : mongoose.Schema.Types.ObjectId,
         ref : 'user',
         required: false,
+    },
+
+    acceptedBid:{
+        type : mongoose.Schema.Types.ObjectId,
+        ref : 'bid',
+        required: false,
+
+    },
+    timePosted : {
+        type : Date,
+        default : Date.now,
+        required : true,
     },
 
   

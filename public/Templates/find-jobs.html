@@ -71,8 +71,8 @@
 
         <!-- Job Cards -->
 
-        <div class="job-card-container" id="jobsCardContainer">
-        <!-- <div class="job-card" id="job1-card">
+       <div class="job-card-container" id="jobsCardContainer">
+         <!-- <div class="job-card" id="job1-card">
            <div class="job-card-top">
             <h3>Bathroom Tap Repair</h3>
             <button class="place-bid-button">Place a bid</button>
@@ -94,6 +94,7 @@
             <button  class="learn-more-job-button" target="job1-card"><span> Learn more </span>
               <img src="../static/Assets/Images/down-arrow.png" alt=""></button>
             
+              <div class="hidden-content">
                 <div class="job-details">
                   <img src="../static/Assets/Images/user-icon.png" alt="">
                   <strong>Service Seeker Name :</strong> 
@@ -104,8 +105,13 @@
                   <strong>Location :</strong> 
                   <span>Jaitala Road, Nagpur, Maharashtra</span>
                 </div>
+                <div class="job-details">
+                  <img src="../static/Assets/Images/user-icon.png" alt="">
+                  <strong>Seeker Name :</strong> 
+                  <span>Harshasl Warukar</span>
+                </div>
 
-                <div class=" job-images-cont" >
+                <div class="job-images-cont" >
                   <img src="../static/Assets/Images/image-icon.png" alt="">
                 <strong>Images :</strong> 
                 <img src="https://www.shutterstock.com/image-photo/water-tap-faucet-flow-bathroom-600nw-1833087568.jpg" class="job-images" alt="Tap Repair">
@@ -120,61 +126,10 @@
             <button  class="learn-less-job-button" target="job1-card"><span> Learn less </span>
               <img src="../static/Assets/Images/up-arrow.png" alt=""></button>
             </div>
-        <div class="job-card" id="job2-card">
-           <div class="job-card-top">
-            <h3>Bathroom Tap Repair</h3>
-            <button class="place-bid-button">Place a bid</button>
-           </div>
-
-           <div class="job-card-mid">
-
-            <div class="badge-new">NEW</div>
-            <span class="time-posted">Posted 11 hours ago</span>
-
-          </div>
-
-            <p class="job-description">I need a skilled plumber to repair a leaking bathroom tap. The tap drips constantly, and I believe the washer or valve may need replacement. Looking for someone with experience in tap repairs who can complete the job quickly and efficiently.</p>
-            <div class="job-details">
-              <img src="../../Assets/Images/categories-icon.png" alt="">
-              <strong>Category :</strong> 
-              <span>Plumbing</span>
-            </div>
-            <button  class="learn-more-job-button" target="job2-card"><span> Learn more </span>
-              <img src="../static/Assets/Images/down-arrow.png" alt=""></button>
-            
-                <div class="job-details">
-                  <img src="../static/Assets/Images/user-icon.png" alt="">
-                  <strong>Service Seeker Name :</strong> 
-                  <span>Praful Wasnik</span>
-                </div>
-                <div class="job-details">
-                  <img src="../static/Assets/Images/location-icon.png" alt="">
-                  <strong>Location :</strong> 
-                  <span>Jaitala Road, Nagpur, Maharashtra</span>
-                </div>
-
-                <div class=" job-images-cont" >
-                  <img src="../static/Assets/Images/image-icon.png" alt="">
-                <strong>Images :</strong> 
-                <img src="https://www.shutterstock.com/image-photo/water-tap-faucet-flow-bathroom-600nw-1833087568.jpg" class="job-images" alt="Tap Repair">
-                <img src="https://www.shutterstock.com/image-photo/water-tap-faucet-flow-bathroom-600nw-1833087568.jpg" class="job-images" alt="Tap Repair">
-              </div>
-
-                <div class="job-details">
-                  <img src="../static/Assets/Images/information-icon-png.png" alt="">
-                  <strong>Additional Requirements:</strong> <span>Availability during weekends or evenings is preferred. Experience with similar tap models is highly desirable.</span>
-                </div>
-                
-            <button  class="learn-less-job-button" target="job2-card"><span> Learn less </span>
-              <img src="../static/Assets/Images/up-arrow.png" alt=""></button>
             </div> -->
-
-        </div>
-
         
-      </div>
-
-        
+  
+      </div> -->
 
         <!-- Load More Jobs Button -->
         <button class="load-more-jobs">Load more Jobs</button>
@@ -217,6 +172,25 @@
 
   </section>
 
+<div id="add-bid-form-cont">
+  <form id="add-bid-form">
+
+    <span id="close-bid-form">&#10006;</span>
+    <h2 id="bid-job-name"></h2>
+    <div class="bid-price">
+      <p>Price you want to offer(Rs): </p>
+      <input type="number" id="bidPrice" >
+
+    </div>
+    <textarea name="" id="bidDescription" placeholder="Write Something about your offer"></textarea>
+    <input type="submit" value="Place Bid" >
+    
+
+  </form>
+</div>
+
+  
+
 
 
 
@@ -255,123 +229,116 @@
 
                 <!-- Login And Register Section Starts here -->
 
-  <div class="login-register-section" id="login-register-section">
+                <div class="login-register-section" id="login-register-section">
 
 
-    <div class="common-cont log-reg-cont" id="choose-reg-cont">
-
-      <div class="close-log-reg-button" target="choose-reg-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-
-      <h3 class="log-reg-heading">
-        Register As
-      </h3>
-
-      <button class="choose-user-button" id="seeker-register-btn">Service Seeker</button>
-      <button class="choose-user-button" id="provider-register-btn">Service Provider</button>
-
-      <p>Already have an Account?</p>
-
-      <button id="login-button" class="submit-button">Login</button>
-    </div>
-    
-    <div class="login-cont log-reg-cont" id="login-cont" >
-
-      <div class="close-log-reg-button" target="login-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-
-      <h3 class="log-reg-heading">
-        Log in
-      </h3>
-
-      <div class="log-reg-input ">
-        <input type="tel"  id="login-phone" placeholder="Your Phone">
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP">
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-      </div>
-
-      <button id="login-button" class="submit-button">Login</button>
-
-
-      
-
-    </div>
-
-    <div class=" log-reg-cont" id="register-provider-cont">
-
-      <div class="close-log-reg-button" target="register-provider-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-      
-
-      <h3 class="log-reg-heading" style="font-size: 1.2vw;">
-        Register as Service Provider
-      </h3>
-
-      <div class="log-reg-input">
-        <input type="text"  id="register-name" placeholder="Your Name" >
-      </div>
-
-      <div class="log-reg-input">
-        <input type="tel"  id="login-phone" placeholder="Your Phone">
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP" >
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-       
-      </div>
-      <button id="login-button" class="submit-button">Submit</button>
-
-
-      
-
-
-    </div>
-
-    <div class=" log-reg-cont" id="register-seeker-cont">
-
-      <div class="close-log-reg-button" target="register-seeker-cont">
-        <img src="../../Assets/Images/close-icon.png" alt="">
-      </div>
-
-      <h3 class="log-reg-heading" style="font-size: 1.2vw;">
-        Register as Service Seeker
-      </h3>
-
-      <div class="log-reg-input">
-        <input type="text"  id="register-name" placeholder="Your Name" >
-       
-      </div>
-      <div class="log-reg-input">
-        <input type="tel"  id="login-phone" placeholder="Your Phone" >
-        <a href="" id="verify-phone-button" class="opt-button">send opt</a>
-      </div>
-      
-      <div class="log-reg-input">
-        <input type="number"  id="login-otp" placeholder="Enter OTP" >
-        <a href="" id="resend-otp-button" class="opt-button">resend opt</a>
-       
-      </div>
-
-      <button id="login-button" class="submit-button">Submit</button>
-
-
-
-    </div>
-
-
-
-    
-
-
-  </div>
+                  <div class="common-cont log-reg-cont" id="choose-reg-cont">
+              
+                    <div class="close-log-reg-button" target="choose-reg-cont">
+                      <img src="../static/Assets/Images/close-icon.png" alt="">
+                    </div>
+              
+                    <h3 class="log-reg-heading">
+                      Register As
+                    </h3>
+              
+                    <button class="choose-user-button" id="seeker-register-btn">Service Seeker</button>
+                    <button class="choose-user-button" id="provider-register-btn">Service Provider</button>
+              
+                    <p>Already have an Account?</p>
+              
+                    <button id="login-button" class="submit-button">Login</button>
+                  </div>
+                  
+                  <form class="login-cont log-reg-cont" id="login-cont" >
+              
+                    <div class="close-log-reg-button" target="login-cont">
+                      <img src="../static/Assets/Images/close-icon.png" alt="">
+                    </div>
+              
+                    <h3 class="log-reg-heading">
+                      Log in
+                    </h3>
+              
+                    <div class="log-reg-input ">
+                      <input type="tel"  id="login-phone" class="log-reg-phone" placeholder="Your Phone">
+                      <a  id="verify-phone-button " class="opt-button send-otp-btn">send otp</a>
+                    </div>
+                    
+                    <div class="log-reg-input">
+                      <input type="number"  id="login-otp" placeholder="Enter OTP">
+                      <a href="" id="resend-otp-button" class="opt-button resend-otp-button">resend otp</a>
+                    </div>
+              
+                    <input id="login-button" class="submit-button" type="Submit" >
+              
+              
+              
+              
+                    
+              
+                  </form>
+              
+                  <form class=" log-reg-cont" id="register-provider-cont">
+              
+                    <div class="close-log-reg-button" target="register-provider-cont">
+                      <img src="../static/Assets/Images/close-icon.png" alt="">
+                    </div>
+                    
+              
+                    <h3 class="log-reg-heading" style="font-size: 1.2vw;">
+                      Register as Service Provider
+                    </h3>
+              
+                    <div class="log-reg-input">
+                      <input type="text"  id="register-provider-name" placeholder="Your Name" >
+                    </div>
+              
+                    <div class="log-reg-input">
+                      <input type="tel"  id="register-provider-phone" class="log-reg-phone" placeholder="Your Phone">
+                      <a href="" id="verify-phone-button" class="opt-button send-otp-btn">send otp</a>
+                    </div>
+                    
+                    <div class="log-reg-input">
+                      <input type="number"  id="register-provider-otp" placeholder="Enter OTP" >
+                      <a href="" id="resend-otp-button" class="opt-button">resend otp</a>
+                     
+                    </div>
+                    <input id="login-button" class="submit-button" type="Submit">
+              
+                  </form>
+              
+                  <form class=" log-reg-cont" id="register-seeker-cont">
+              
+                    <div class="close-log-reg-button" target="register-seeker-cont">
+                      <img src="../static/Assets/Images/close-icon.png" alt="">
+                    </div>
+              
+                    <h3 class="log-reg-heading" style="font-size: 1.2vw;">
+                      Register as Service Seeker
+                    </h3>
+              
+                    <div class="log-reg-input">
+                      <input type="text"  id="register-seeker-name" placeholder="Your Name" >
+                     
+                    </div>
+                    <div class="log-reg-input">
+                      <input type="tel"  id="register-seeker-phone" class="log-reg-phone" placeholder="Your Phone" >
+                      <a href="" id="verify-phone-button" class="opt-button send-otp-btn">send otp</a>
+                    </div>
+                    
+                    <div class="log-reg-input">
+                      <input type="number"  id="register-seeker-otp" placeholder="Enter OTP" >
+                      <a href="" id="resend-otp-button" class="opt-button">resend otp</a>
+                     
+                    </div>
+              
+                    <input id="login-button" class="submit-button" type="Submit">
+              
+              
+              
+                  </form>
+              
+                </div>
 
   <!-- Login and Register Section ends here -->
